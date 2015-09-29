@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Solos For Change</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		p, h1, h2, h3, h4{
+			text-align: justify;
+		}
+		.row-outter{
+			padding-top: 50px;
+			padding-bottom: 50px;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.carousel-inner .item {
+		    overflow: hidden;
+		    max-width: 100%;
+		    max-height: 100%;
+		}
+		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+			-webkit-filter: brightness(0.7);
+		}
+		.row-footer{
+			background-color: #e9e9e9;
+			min-height: 150px;
+			margin-bottom: -10px;
+		}
+		.col-banner{
+			margin-top: 60px;
+		}
+		.row-main-banner, .row-about-project{
+			color: #ffffff;
+			background-color: #99cc33;
+		}
+		.navbar-no-opaque{
+			background-color: #e0e0e0;
+			opacity: 0.75;
+			border-width: 0px;
+			font-weight: 800;
+		}
+		.navbar-no-opaque img{
+			height: 50px;
+			margin-top: -15px;
+		}
+		.required-message{
+			display: none;
+		}
+		.call{
+			font-weight: bold;
+			font-size: 55px;
+			margin-top: 100px;
+		}
+		@media screen and (max-width: 480px) {
+		    .navbar-no-opaque img{
+				height: 40px;
+				margin-top: -15px;
+			}
+		}
+		@media screen and (max-width: 750px) {
+		    .carousel-inner > .item > img {
+				-webkit-filter: brightness(0.7);
+			    content:url("img/street_artists_sm.png");
+			}
+			.carousel-inner > .item > a > img{
+				-webkit-filter: brightness(0.7);
+			    content:url("img/solos_for_change_the_sm.png");
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top navbar-no-opaque" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="/">
+	        <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png">
+	      </a>
+	    </div> 
+	    <div class="collapse navbar-collapse" id="navbar-content">
+		  	<ul class="nav navbar-nav navbar-right">
+		        <li><a href="home">Home<span class="sr-only">(current)</span></a></li>
+		        <li><a href="primeira-feira-de-ciencias-integrada">Oficina Urbana</a></li>
+		        <li class="active"><a href="#">Solos for Change<sup>TM</sup></a></li>
+	        </ul>
+	    </div>
+	  </div>
+	</div>
+	
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" ></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="2" ></li> -->
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="img/street_artists_md.png" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              	<h5 class="call">SOLOS FOR CHANGE<sup><font size="5">TM</font></sup></h5>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#sfc-the">
+          	<img class="second-slide" src="img/solos_for_change_the_md.png" alt="Second slide">
+          	</a>
+          <!-- <div class="container">
+            <div class="carousel-caption">
+            </div>
+          </div> -->
+        </div>
+        <!-- <div class="item">
+          <img class="third-slide" src="img/ovt_lg.png" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <h1><a href="#video-ovt" class="btn btn-default">Inspire-se</a></h1>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>	
+	
+	<div class="container-fluid">
+	<div id="sfc-the" class="row row-fluid row-outter">
+		<div class="col col-md-1"></div>
+		<div class="col col-md-10">
+			<h2>Solos For Change<sup>TM</sup> é um evento Artístico Cultural onde músicos de todas as idades, de iniciantes a profissionais, executam solos em seus instrumentos em locais públicos e recebem em troca dinheiro em seus chapéus, do público presente no local.
+			A renda arrecadada durante o evento é destinada a promoção de Bolsas de Estudo em Escolas Privadas, para alunos em Escolas Públicas.</h2>
+		</div>
+		<div class="col col-md-1"></div>
+	</div>
+	</div>
+	
+	<div class="container-fluid">
+	<div id="video-ovt" class="row row-fluid row-outter">
+		<div class="col col-md-2"></div>
+		<div class="col col-md-8">
+		<form method="POST" id="ss-form" target="_self" onsubmit="" role="form">
+			<ol role="list" class="ss-question-list" style="padding-left: 0">
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="form-group">
+							<label for="entry_1389010461">
+								<div>
+									Nome Completo <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+										aria-hidden="true">*</span>
+								</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+								<input type="text" name="entry.1389010461" value="" class="form-control" id="entry_1389010461" dir="auto" aria-label="Nome Completo  " aria-required="true" required="" title="">
+							<div class="error-message" id="2077481572_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="form-group">
+							<label for="entry_384810117">
+								<div>
+									Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+										aria-hidden="true">*</span>
+								</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+								<input type="text" name="entry.384810117" value="" class="form-control" id="entry_384810117" dir="auto" aria-label="Email  " aria-required="true" required="" title="">
+							<div class="error-message" id="259799916_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="form-group">
+							<label for="entry_361599614">
+								<div>
+									Confirmar Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+										aria-hidden="true">*</span>
+								</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+								<input type="text" name="entry.361599614" value="" class="form-control" id="entry_361599614" dir="auto" aria-label="Confirmar Email  " aria-required="true" required="" title="">
+							<div class="error-message" id="361508119_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item  ss-text">
+						<div class="form-group">
+							<label for="entry_2027890120">
+							<div>Telefone</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+								<input type="text" name="entry.2027890120" value="" class="form-control" id="entry_2027890120" dir="auto" aria-label="Telefone  " title="">
+							<div class="error-message" id="1664997430_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item  ss-text">
+						<div class="form-group">
+							<label for="entry_1856961147">
+							<div>Bairro onde mora
+								<font color="silver">Útil na escolha do lugar onde você irá tocar</font></div></label> 
+								<input type="text" name="entry.1856961147" value="" class="form-control" id="entry_1856961147" dir="auto"
+									aria-label="Bairro onde mora Usado na escolha do lugar onde você irá tocar " title="">
+							<div class="error-message" id="1690460941_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-text">
+						<div class="form-group">
+							<label for="entry_1997126783">
+								<div>
+									Instrumento Musical <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
+										class="ss-required-asterisk" aria-hidden="true">*</span>
+								</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+								<input type="text" name="entry.1997126783" value="" class="form-control" id="entry_1997126783" dir="auto" aria-label="Instrumento Musical  " aria-required="true" required="" title="">
+							<div class="error-message" id="1655675891_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item  ss-text">
+						<div class="form-group">
+							<label for="entry_136317485">
+							<div>Influências</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+								<input type="text" name="entry.136317485" value="" class="form-control" id="entry_136317485" dir="auto" aria-label="Influências  " title="">
+							<div class="error-message" id="1859503965_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="auto" class="ss-item ss-item-required ss-checkbox">
+						<div class="form-group">
+							<label for="entry_925060995">
+							<div>
+									Regulamento do 1o Solos For Change Teresina <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
+										class="ss-required-asterisk" aria-hidden="true">*</span>
+								</div>
+								<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+							</label>
+							<textarea rows="10" cols="500" class="form-control" readonly>
+O seguinte Regulamento é referente ao evento 1o Solos For ChangeTM Teresina.
+
+Sobre o evento:
+O Solos For ChangeTM é um evento artístico cultural que tem por finalidade a angariação de fundos destinados a promoção de Bolsas de Estudo em Escolas Particulares para alunos que frequentam Escolas Públicas.
+O evento ocorre em locais públicos, como praças ou calçadões - não existindo, assim, necessidade de compra de ingresso para assistir às apresentações - que são especificamente definidos em até 15 dias úteis antes da data de realização do evento.
+Músicos executam solos, ou músicas intrumentais, para o público presente no local. Existe a participação de uma grande massa de artistas pela cidade. Além do artista executar seu trabalho - em um curto espaço de tempo, ele é elegível a uma premiação concedida ao final do evento.
+
+Formato do Evento:
+O formato do evento é baseado no trabalho de artistas de rua.
+No local, o solista terá um chapéu ao seu lado enquanto executa o solo. Pessoas passando pelo local, ou o público que esteja presente para prestigiar a performance do artista, demonstra seu apoio ao Artista e à Causa do evento ao dispensar no chapéu dinheiro, em cédulas ou moedas.
+Os inscritos comparecerão no local definido - escolhido pelo solista dentre as opções disponíveis - e apresentarão sua performance/solo ao público presente no local.
+Somente um instrumento musical é permitido por participante.
+Todo tipo de instrumento musical é permitido ser usado: de corda, sopro, percussão, eletrônico, etc.
+O tempo máximo de performance do solo é de 10 minutos, contados a partir do início de execução do mesmo.
+O participante do evento pode levar seu próprio instrumento. Uma guitarra elétrica e/ou um violão serão disponibilizados em cada local de realização do evento. Demais instrumentos, como 
+
+Inscrição:
+A inscrição para o evento Solos for ChangeTM é gratuita.
+As inscrições serão realizadas a partir do dia 26 de Setembro, às 00:00, horário de Brasília; e se encerrarão no dia 31 de Outubro, às 23:59, horário de Brasília.
+As vagas são limitadas de acordo com a data e local onde o evento será realizado.
+Para se inscrever, o artista preenche o formulário disponível no site oficial do evento e submete o formulário. O inscrito recebe então, por email, a confirmação de sua inscrição.
+Caso existam vagas após o encerramento do período de inscrição, inscrições poderão ser feitas durante o evento, de acordo com a disponibilidade de tempo para o artista que deseja se apresentar. Cabe ao representante da Equipe de Organização do Evento (EOE), presente no local, afirmar se é possível ou não a realização da inscrição durante o evento.
+
+Premiação:
+Uma premiação de R$300,00 (Trezentos reais) será entregue ao vencedor do concurso de solos. Podem existir mais de um vencedor, nos casos de duelos de intrumentos musicais, por exemplo, duelos de guitarra. Nesse caso, os vencedores dividirão o Prêmio.
+É declarado vencedor aquele que coletar mais dinheiro em seu chapéu.
+A contagem da quantia coletada pelo solista será feita po um dos representantes da EOE, presentes no local, na presença do solista, logo após a dispensa do chapéu.
+Todos os inscritos, que: se apresentam em um dos locais definidos para o evento, executam o solo musical e dispensam o dinheiro recebido durante a execução do solo no respectivo stand local são elegíveis para concorrar ao Prêmio.
+A divulgação do resultado é feito logo após o final do evento. 
+A EOE entra então em contato com o artista para dar procedimento à entrega do prêmio.
+							</textarea>
+							<ul class="ss-choices ss-choices-required" role="group" aria-label="Regulamento do 1o Solos For Change Teresina  ">
+								<li class="ss-choice-item">
+									<label>
+										<span class="ss-choice-item-control goog-inline-block">
+											<input type="checkbox" name="entry.1657533977" value="Li e Entendi o Regulamento do 1o Solos For Change Teresina" id="group_1657533977_1"
+													role="checkbox" aria-required="true">
+										</span> 
+										<span class="ss-choice-label">Li e Entendi oRegulamento do 1o Solos For Change Teresina</span> 
+									</label>
+								</li>
+							</ul>
+							<div class="error-message" id="925060995_errorMessage"></div>
+							<div class="required-message">This is a required question</div>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" name="draftResponse" value="[,,&quot;-2678284622779353046&quot;]">
+				<input type="hidden" name="pageHistory" value="0">
+				<input type="hidden" name="fvv" value="0">
+				<input type="hidden" name="fbzx" value="-2678284622779353046">
+				<div class="ss-item ss-navigate">
+					<table id="navigation-table">
+						<tbody>
+							<tr>
+								<td class="form-group goog-inline-block" id="navigation-buttons" dir="ltr">
+									<input name="submit" value="Inscrever" id="ss-submit" class="btn btn-default">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</ol>
+		</form>
+		</div>
+		<div class="col col-md-2"></div>
+	<script type="text/javascript">
+		$(function() {
+		    $('#ss-submit').click(function() {
+		        $.ajax({
+		            type: 'POST',
+		            url: 'https://docs.google.com/forms/d/1zsFye5PK-zVtYLe7IGTYZVIP3qv5pRLXYWQWdVMrNms/formResponse',
+		            data: { 'entry.1389010461': $('#entry_1389010461').val(), 
+		                    'entry.384810117': $('#entry_384810117').val(),
+		                    'entry.361599614' : $('#entry_361599614').val(),
+		                    'entry.2027890120': $('#entry_2027890120').val(),
+		                    'entry.1856961147': $('#entry_1856961147').val(),
+		                    'entry.1997126783': $('#entry_1997126783').val(),
+		                    'entry.136317485': $('#entry_136317485').val(),
+		                    'entry.1657533977': $('#entry_1657533977').val(),
+		                    'draftResponse'	: '[,,&quot;-2678284622779353046&quot;]',
+		                    'pageHistory' : 0,
+		                    'fvv':0,
+		                    'fbzx' : '-2678284622779353046'}
+		        });
+				$('#collab-form').css('display', 'none');
+				$('#collab-confirm').css('display', 'block');
+		    }); 
+		});
+	</script>
+	</div>
+	</div>
+
+	<div class="container-fluid"><div class="row row-fluid row-outter row-footer"></div></div>
+</body>
+</html>
