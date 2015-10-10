@@ -7,12 +7,26 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
+		iframe{
+			border: none;
+		}
+		.navbar-no-opaque{
+			background-color: #e0e0e0;
+			opacity: 0.75;
+			border-width: 0px;
+			font-weight: 800;
+		}
 		.navbar-no-opaque img{
 			height: 50px;
 			margin-top: -15px;
+		}
+		.pri-sfc-descr{
+			background-color: #99cc33;
+			color: #ffffff;
 		}
 		@media screen and (max-width: 480px) {
 		    .navbar-no-opaque img{
@@ -20,8 +34,66 @@
 				margin-top: -15px;
 			}
 		}
+		@media screen and (max-width: 1170px) {
+		    .sfc-steps-descr{
+		    	width: 25%;
+		    }
+		    .sfc-steps-arrow{
+		    	display: none;
+		    }
+		}
+		@media screen and (min-width: 771px) {
+			.sfc-steps-thumbnail{
+				display: none;
+			}
+		}
+		@media screen and (max-width: 770px) {
+		    .sfc-steps .img-sfc-steps{
+		    	display: none;
+		    }
+			.sfc-steps-descr{
+		    	width: 100%;
+		    }
+		    .sfc-steps-thumbnail{
+		    	display: block;
+		    	margin-left: auto;
+		    	margin-right: auto;
+		    }
+		}
+		.sfc-steps{
+			margin: 50px 0px 0px 0px;
+			padding-bottom: -200px;
+			padding-top: -200px;
+		} 
+		.sfc-steps-arrow img{
+			width: 100%;
+		}
+		.solos-for-change{
+			font-family: Lobster Two, cursive;
+		}
+		.row-outter{
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.row-title{
+			text-align: center;
+		}
+		.row-title img{
+			margin-left: auto;
+			margin-right: auto;
+			height: 200px;
+		}
 		.required-message{
 			display: none;
+		}
+		#subscrpt-confirm{
+			display: none;
+		}
+		.redirect-form{
+			display: none;
+		}
+		.ss-secondary-text{
+			color: #aaaaaa;
 		}
 		.row-footer{
 			background-color: #e9e9e9;
@@ -42,11 +114,8 @@
 		.nova-geracao a:hover{
 			text-decoration: none;
 		}
-		@media screen and (max-width: 480px) {
-		    .navbar-no-opaque img{
-				height: 40px;
-				margin-top: -15px;
-			}
+		.call{
+			font-size: 55px;
 		}
 	</style>
 </head>
@@ -77,7 +146,7 @@
 		        <li><a href="home">Home<span class="sr-only">(current)</span></a></li>
 		  		<li><a href="quem-somos">Quem Somos</a></li>
 		        <li><a href="primeira-feira-de-ciencias-integrada">Oficina Urbana</a></li>
-		        <li class="active"><a href="solos-for-change">Solos for Change<sup>TM</sup></a></li>
+		        <li class="active"><a href="solos-for-change">Solos for Change<sup>&reg</sup></a></li>
 		        <li><a href="blog">Blog</a></li>
 	        </ul>
 	    </div>
@@ -85,129 +154,202 @@
 	</div>
 	
 	<div class="container-fluid">
-		<div class="row row-fluid" style="height: 300px; padding-top: 100px;">
+		<div class="row row-fluid row-outter row-title">
+			<img class="img-responsive" alt="1o Solos for Change Teresina" src="img/solos_for_change.png">
+			<h1 class="call solos-for-change">1<sup>o</sup> Solos for Change<sup>&reg</sup> - Teresina</h1>
+		</div>
+		<div class="row row-fluid row-outter pri-sfc-descr" >
+			<h2>Apoiando mudança na vida de muitas pessoas</h2>
+			<h3>O Primeiro Solos for Change em Teresina terá sua renda gerada totalmente empenhada no Projeto Nova Escola.</h3>
+			<h3>Participando do Solos for Change como um Solista, você estará ajudando nesta causa e ainda poderá ganhar Prêmios de até R$1000,00 (mil reais); válido para categorias Amador e Profissional.</h3>
+			<h3>Na categoria Amador, os Solistas concorrem ainda ao Prêmio Solista Júnior.</h3>
+			<h3>Na categoria Profissional, os Solistas concorrem ao também ao Prêmio Músico Solidário.</h3>
+		</div>
+		<div class="row row-fluid sfc-steps">
+			<div class="col col-md-2 col-sm-3 col-sm-3 sfc-steps-descr">
+				<img alt="" src="img/steps_participation_1.png" class="sfc-steps-thumbnail">
+				<img alt="passo 1" src="img/steps_participation_1.png" class="img-responsive img-sfc-steps">
+				<h3>Passo 1</h3>
+				<p>ansod ajfoiae hga aj vioavnanjva sn voan sjov ajbs jvasjv najbvasjv nak vanjivn asnv</p>
+			</div>
+			<div class="col col-md-1 sfc-steps-arrow">
+				<img alt="" src="img/arrow_1.png">
+			</div>
+			<div class="col col-md-2 col-sm-3 sfc-steps-descr">
+				<img alt="" src="img/steps_participation_2.png" class="sfc-steps-thumbnail">
+				<h3>Passo 2</h3>
+				<img alt="passo 2" src="img/steps_participation_2.png" class="img-responsive img-sfc-steps">
+				<p>ansod ajfoiae hga aj vioavnanjva sn voan sjov ajbs jvasjv najbvasjv nak vanjivn asnv</p>
+			</div>
+			<div class="col col-md-1 sfc-steps-arrow">
+				<img alt="" src="img/arrow_2.png">
+			</div>
+			<div class="col col-md-2 col-sm-3 sfc-steps-descr">
+				<img alt="" src="img/steps_participation_3.png" class="sfc-steps-thumbnail">
+				<h3>Passo 3</h3>
+				<p>ansod ajfoiae hga aj vioavnanjva sn voan sjov ajbs jvasjv najbvasjv nak vanjivn asnv</p>
+				<img alt="passo 3" src="img/steps_participation_3.png" class="img-responsive img-sfc-steps">
+			</div>
+			<div class="col col-md-1 sfc-steps-arrow">
+				<img alt="" src="img/arrow_3.png">
+			</div>
+			<div class="col col-md-2 col-sm-3 sfc-steps-descr">
+				<img alt="" src="img/steps_participation_4.png" class="sfc-steps-thumbnail">
+				<img alt="passo 4" src="img/steps_participation_4.png" class="img-responsive img-sfc-steps">
+				<h3>Passo 4</h3>
+				<p>ansod ajfoiae hga aj vioavnanjva sn voan sjov ajbs jvasjv najbvasjv nak vanjivn asnv</p>
+			</div>
+			<div class="col col-md-1 sfc-steps-arrow"></div>
+		</div>
+		<div class="row row-fluid">
 			<div class="col col-md-2"></div>
 			<div class="col col-md-8">
-				<h1>Inscrições abertas a partir de 7 de Outubro.</h1>
+				<h1>Inscrições abertas a partir de 9 de Outubro.</h1>
 			</div>
 			<div class="col col-md-2"></div>
 		</div>
 	</div>
 	
 	<div class="container-fluid">
-	<div id="video-ovt" class="row row-fluid row-outter">
+	<div id="subscrpt" class="row row-fluid row-outter">
 		<div class="col col-md-2"></div>
-		<div class="col col-md-8">
-		<form method="POST" id="ss-form" target="_self" onsubmit="" role="form">
-			<ol role="list" class="ss-question-list" style="padding-left: 0">
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item ss-item-required ss-text">
-						<div class="form-group">
-							<label for="entry_1389010461">
-								<div>
-									Nome Completo <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
-										aria-hidden="true">*</span>
+		<div id="subscrpt-form" class="col col-md-8">
+				<form  action="https://docs.google.com/forms/d/1zsFye5PK-zVtYLe7IGTYZVIP3qv5pRLXYWQWdVMrNms/formResponse" method="POST" id="ss-form" target="subscrpt-confirm" onsubmit="" role="form">
+					<ol role="list" class="ss-question-list">
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_1389010461"><div class="ss-q-title">
+											Nome Completo <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+												aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.1389010461" value="" class="ss-q-short form-control"
+										id="entry_1389010461" dir="auto" aria-label="Nome Completo  " aria-required="true" required="" title="">
+									<div class="error-message" id="2077481572_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
 								</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
-								<input type="text" name="entry.1389010461" value="" class="form-control" id="entry_1389010461" dir="auto" aria-label="Nome Completo  " aria-required="true" required="" title="">
-							<div class="error-message" id="2077481572_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item ss-item-required ss-text">
-						<div class="form-group">
-							<label for="entry_384810117">
-								<div>
-									Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
-										aria-hidden="true">*</span>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_384810117"><div class="ss-q-title">
+											Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+												aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.384810117" value="" class="ss-q-short form-control"
+										id="entry_384810117" dir="auto" aria-label="Email  " aria-required="true" required="" title="">
+									<div class="error-message" id="259799916_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
 								</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
-								<input type="text" name="entry.384810117" value="" class="form-control" id="entry_384810117" dir="auto" aria-label="Email  " aria-required="true" required="" title="">
-							<div class="error-message" id="259799916_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item ss-item-required ss-text">
-						<div class="form-group">
-							<label for="entry_361599614">
-								<div>
-									Confirmar Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
-										aria-hidden="true">*</span>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_361599614"><div class="ss-q-title">
+											Confirmar Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+												aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.361599614" value="" class="ss-q-short form-control"
+										id="entry_361599614" dir="auto" aria-label="Confirmar Email  " aria-required="true" required="" title="">
+									<div class="error-message" id="361508119_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
 								</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
-								<input type="text" name="entry.361599614" value="" class="form-control" id="entry_361599614" dir="auto" aria-label="Confirmar Email  " aria-required="true" required="" title="">
-							<div class="error-message" id="361508119_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item  ss-text">
-						<div class="form-group">
-							<label for="entry_2027890120">
-							<div>Telefone</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
-								<input type="text" name="entry.2027890120" value="" class="form-control" id="entry_2027890120" dir="auto" aria-label="Telefone  " title="">
-							<div class="error-message" id="1664997430_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
-						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item  ss-text">
-						<div class="form-group">
-							<label for="entry_1856961147">
-							<div>Bairro onde mora
-								<font color="silver">Útil na escolha do lugar onde você irá tocar</font></div></label> 
-								<input type="text" name="entry.1856961147" value="" class="form-control" id="entry_1856961147" dir="auto"
-									aria-label="Bairro onde mora Usado na escolha do lugar onde você irá tocar " title="">
-							<div class="error-message" id="1690460941_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
-						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item ss-item-required ss-text">
-						<div class="form-group">
-							<label for="entry_1997126783">
-								<div>
-									Instrumento Musical <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
-										class="ss-required-asterisk" aria-hidden="true">*</span>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item  ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_2027890120"><div class="ss-q-title">Telefone</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.2027890120" value="" class="ss-q-short form-control"
+										id="entry_2027890120" dir="auto" aria-label="Telefone  " title="">
+									<div class="error-message" id="1664997430_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
 								</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
-								<input type="text" name="entry.1997126783" value="" class="form-control" id="entry_1997126783" dir="auto" aria-label="Instrumento Musical  " aria-required="true" required="" title="">
-							<div class="error-message" id="1655675891_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item  ss-text">
-						<div class="form-group">
-							<label for="entry_136317485">
-							<div>Influências</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
-								<input type="text" name="entry.136317485" value="" class="form-control" id="entry_136317485" dir="auto" aria-label="Influências  " title="">
-							<div class="error-message" id="1859503965_errorMessage"></div>
-							<div class="required-message">This is a required question</div>
-						</div>
-					</div>
-				</div>
-				<div class="ss-form-question errorbox-good" role="listitem">
-					<div dir="auto" class="ss-item ss-item-required ss-checkbox">
-						<div class="form-group">
-							<!-- <label for="entry_925060995">
-							<div>
-									Regulamento do 1o Solos For Change Teresina <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
-										class="ss-required-asterisk" aria-hidden="true">*</span>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item  ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_1856961147"><div class="ss-q-title">Bairro onde mora</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto">Usado na escolha do lugar onde você irá tocar</div></label> 
+										<input type="text" name="entry.1856961147" value="" class="ss-q-short form-control" id="entry_1856961147" dir="auto"
+										aria-label="Bairro onde mora Usado na escolha do lugar onde você irá tocar " title="">
+									<div class="error-message" id="1690460941_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
 								</div>
-								<div class="ss-q-help ss-secondary-text" dir="auto"></div>
-							</label> -->
-							<textarea rows="10" cols="500" class="form-control" readonly>
+							</div>
+						</div>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_1997126783"><div class="ss-q-title">
+											Instrumento Musical <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
+												class="ss-required-asterisk" aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.1997126783" value="" class="ss-q-short form-control"
+										id="entry_1997126783" dir="auto" aria-label="Instrumento Musical  " aria-required="true" required="" title="">
+									<div class="error-message" id="1655675891_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
+								</div>
+							</div>
+						</div>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item  ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_904637350"><div class="ss-q-title">Nome do(a) parceiro(a)</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto">No caso de dueto ou trio</div></label> 
+										<input type="text" name="entry.904637350"
+										value="" class="ss-q-short  form-control" id="entry_904637350" dir="auto" aria-label="Nome do(a) parceiro(a) No caso de dueto ou trio " title="">
+									<div class="error-message" id="1197931216_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
+								</div>
+							</div>
+						</div>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-select">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_28527184"><div class="ss-q-title">
+											Categoria <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+												aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<select class="form-control" name="entry.28527184" id="entry_28527184" aria-label="Categoria  " aria-required="true" required="">
+											<option value=""></option>
+											<option value="Profissional">Profissional</option>
+											<option value="Amador">Amador</option>
+										</select>
+									<div class="required-message">This is a required question</div>
+								</div>
+							</div>
+						</div>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item  ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_136317485"><div class="ss-q-title">Influências</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.136317485" value="" class="ss-q-short form-control"
+										id="entry_136317485" dir="auto" aria-label="Influências  " title="">
+									<div class="error-message" id="1859503965_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
+								</div>
+							</div>
+						</div>
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-checkbox">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_925060995"><div class="ss-q-title">
+											Regulamento do 1o Solos For Change Teresina <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
+												class="ss-required-asterisk" aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+									<textarea rows="10" cols="500" class="form-control" readonly>
 O seguinte Regulamento é referente ao evento 1o Solos For ChangeTM Teresina.
 
 Sobre o evento:
@@ -238,47 +380,48 @@ A contagem da quantia coletada pelo solista será feita po um dos representantes
 Todos os inscritos, que: se apresentam em um dos locais definidos para o evento, executam o solo musical e dispensam o dinheiro recebido durante a execução do solo no respectivo stand local são elegíveis para concorrar ao Prêmio.
 A divulgação do resultado é feito logo após o final do evento. 
 A EOE entra então em contato com o artista para dar procedimento à entrega do prêmio.
-							</textarea>
-							<!-- <ul class="ss-choices ss-choices-required" role="group" aria-label="Regulamento do 1o Solos For Change Teresina  ">
-								<li class="ss-choice-item">
-									<label>
-										<span class="ss-choice-item-control goog-inline-block">
-											<input type="checkbox" name="entry.1657533977" value="Li e Entendi o Regulamento do 1o Solos For Change Teresina" id="group_1657533977_1"
-													role="checkbox" aria-required="true">
-										</span> 
-										<span class="ss-choice-label">Li e Entendi o Regulamento do 1o Solos For Change Teresina</span> 
-									</label>
-								</li>
-							</ul>
-							<div class="error-message" id="925060995_errorMessage"></div>
-							<div class="required-message">This is a required question</div> -->
+									</textarea>
+									<ul class="ss-choices ss-choices-required" role="group" aria-label="Regulamento do 1o Solos For Change Teresina  ">
+										<li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
+										<input type="checkbox" name="entry.1657533977" value="Li e Entendi o Regulamento do 1o Solos For Change Teresina"
+													id="group_1657533977_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span> <span class="ss-choice-label">Li
+													e Entendi o Regulamento do 1o Solos For Change Teresina</span> </label></li>
+									</ul>
+									<div class="error-message" id="925060995_errorMessage"></div>
+									<div class="required-message">This is a required question</div>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<input type="hidden" name="draftResponse" value="[,,&quot;-2678284622779353046&quot;]">
-				<input type="hidden" name="pageHistory" value="0">
-				<input type="hidden" name="fvv" value="0">
-				<input type="hidden" name="fbzx" value="-2678284622779353046">
-				<div class="ss-item ss-navigate">
-					<table id="navigation-table">
-						<tbody>
-							<tr>
-								<td class="form-group goog-inline-block" id="navigation-buttons" dir="ltr">
-									<input name="submit" value="Inscrever" id="ss-submit" class="btn btn-default">
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</ol>
-		</form>
+						<input type="hidden" name="draftResponse" value="[,,&quot;4619224605937415627&quot;]">
+						<input type="hidden" name="pageHistory" value="0">
+						<input type="hidden" name="fvv" value="0">
+						<input type="hidden" name="fbzx" value="4619224605937415627">
+						<div class="ss-item ss-navigate">
+							<table id="navigation-table">
+								<tbody>
+									<tr>
+										<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+										<input type="submit" name="submit" value="Enviar" id="ss-submit" class="jfk-button jfk-button-action btn btn-default">
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</ol>
+				</form>
+		</div>
+		<iframe name="subscrpt-confirm" class="redirect-form"></iframe>
+		<div id="subscrpt-confirm">
+			<h1>Pronto! Você está inscrito agora. O próximo passo é...</h1>
 		</div>
 		<div class="col col-md-2"></div>
+	</div>
+	</div>
 	<script type="text/javascript">
 		$(function() {
 		    $('#ss-submit').click(function() {
-		        $.ajax({
+		       /*  $.ajax({
 		            type: 'POST',
+		            crossDomain: true,
 		            url: 'https://docs.google.com/forms/d/1zsFye5PK-zVtYLe7IGTYZVIP3qv5pRLXYWQWdVMrNms/formResponse',
 		            data: { 'entry.1389010461': $('#entry_1389010461').val(), 
 		                    'entry.384810117': $('#entry_384810117').val(),
@@ -287,19 +430,24 @@ A EOE entra então em contato com o artista para dar procedimento à entrega do 
 		                    'entry.1856961147': $('#entry_1856961147').val(),
 		                    'entry.1997126783': $('#entry_1997126783').val(),
 		                    'entry.136317485': $('#entry_136317485').val(),
-		                    'entry.1657533977': $('#entry_1657533977').val(),
-		                    'draftResponse'	: '[,,&quot;-2678284622779353046&quot;]',
+		                    'entry.904637350': $('#entry_904637350').val(),
+		                    'entry.28527184': $('#entry_28527184').val(),
+		                    'entry.1657533977':$('#entry_1657533977').val(),
+		                    'draftResponse'	: '[,,&quot;-5296120702163163745&quot;]',
 		                    'pageHistory' : 0,
 		                    'fvv':0,
-		                    'fbzx' : '-2678284622779353046'}
-		        });
-				$('#collab-form').css('display', 'none');
-				$('#collab-confirm').css('display', 'block');
+		                    'fbzx' : '-5296120702163163745'},
+		            success: function() {
+						$('#subscrpt-form').css('display', 'none');
+						$('#subscrpt-confirm').css('display', 'block');
+		            },
+		            error: function(result) { console.log(result); },
+		        }); */
+		    	$('#subscrpt-form').css('display', 'none');
+				$('#subscrpt-confirm').css('display', 'block');
 		    }); 
 		});
 	</script>
-	</div>
-	</div>
 	
 	<div class="container-fluid">
 		<div class="row row-fluid row-outter row-footer">

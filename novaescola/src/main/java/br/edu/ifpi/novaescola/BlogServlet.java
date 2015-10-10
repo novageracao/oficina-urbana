@@ -14,8 +14,14 @@ public class BlogServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("html/blog.html");
-		dispatcher.forward(req, resp);
+		String post = req.getParameter("p");
+		if("001".equals(post)){
+			RequestDispatcher dispatcher = req.getRequestDispatcher("html/blog/tips-street-musician.html");
+			dispatcher.forward(req, resp);
+		} else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("html/blog.html");
+			dispatcher.forward(req, resp);
+		}
 	}
 
 }
