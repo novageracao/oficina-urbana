@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nova Escola</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.row-collab{
+			min-height: 500px;
+			color: #ffffff; 
+			background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("img/schoolbus_md.png");
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: center;
+		}
+		.row-collab .col-form{
+			background-color: rgba(233, 233, 233, 0.5);
+			border-radius: 2px;
+		}
+		.row-footer{
+			background-color: #e9e9e9;
+			min-height: 150px;
+			margin-bottom: -10px;
+		}
+		.row-footer li {
+			list-style-type: none;
+		}
+		.nova-geracao a{
+			font-family: "Audiowide", cursive;
+			font-size: 30px;
+			letter-spacing: -1px;
+			word-spacing: -4px;
+			color: #a00000;
+			margin-top: -10px;
+		}
+		.nova-geracao a:hover{
+			text-decoration: none;
+		}
+		.navbar-no-opaque{
+			background-color: #e0e0e0;
+			opacity: 0.75;
+			border-width: 0px;
+			font-weight: 800;
+		}
+		.navbar-no-opaque img{
+			height: 50px;
+			margin-top: -15px;
+		}
+		@media screen and (max-width: 480px) {
+		    .navbar-no-opaque img{
+				height: 40px;
+				margin-top: -15px;
+			}
+		}
+		@media screen and (max-width: 750px) {
+			.row-collab{
+				min-height: 500px;
+				color: #ffffff; 
+				background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("img/schoolbus_sm.png");
+				background-repeat: no-repeat;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+		#collab-confirm{
+			display: none;
+		}
+		.call{
+			font-size: 55px;
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div class="navbar navbar-default navbar-fixed-top navbar-no-opaque" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="/">
+	        <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png">
+	      </a>
+	    </div> 
+	    <div class="collapse navbar-collapse" id="navbar-content">
+		  	<ul class="nav navbar-nav navbar-right">
+		        <li><a href="home">Home<span class="sr-only">(current)</span></a></li>
+		  		<li><a href="quem-somos">Quem Somos</a></li>
+		        <li><a href="saber-mais">Saber Mais</a></li>
+		        <li class="active"><a href="colaborar">Colaborar</a></li>
+		  		<li><a href="#">Blog</a></li>
+	        </ul>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	<div id="collab" class="row row-fluid row-outter row-collab">
+		<div id="collab-form" class="col col-md-5 col-form">
+			<form method="POST" id="ss-form" target="collab_confirm" onsubmit="" role="form">
+				<div class="form-group">
+					<ol role="list" class="ss-question-list" style="padding-left: 0">
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_1037655008"><div class="ss-q-title">
+											Nome e Sobrenome <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
+												class="ss-required-asterisk" aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.1037655008" value="" class="form-control ss-q-short"
+										id="entry_1037655008" dir="auto" aria-label="Nome e Sobrenome  " aria-required="true" required="" title="">
+									<div class="error-message" id="1846438005_errorMessage"></div>
+								</div>
+							</div>
+						</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item  ss-select">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_1311325227"><div class="ss-q-title">Título</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<select name="entry.1311325227" id="entry_1311325227" aria-label="Título  " class="form-control">
+											<option value=""></option>
+											<option value="Sr.">Sr.</option>
+											<option value="Sra.">Sra.</option>
+											<option value="Srta.">Srta.</option>
+										</select>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_1485670716"><div class="ss-q-title">
+											Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+												aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> <input type="text" name="entry.1485670716" value="" class="form-control ss-q-short"
+										id="entry_1485670716" dir="auto" aria-label="Email  " aria-required="true" required="" title="">
+									<div class="error-message" id="503790131_errorMessage"></div>
+								</div>
+							</div>
+						</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item ss-item-required ss-select">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_738745891">
+											<div class="ss-q-title">
+												Qual das opções abaixo mais lhe interessa 
+												<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> 
+												<span class="ss-required-asterisk" aria-hidden="true">*</span>
+											</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<select name="entry.738745891" id="entry_738745891" class="form-control"
+											aria-label="Qual das opções abaixo mais lhe interessa  " aria-required="true" required="">
+											<option value=""></option>
+											<option value="Colaborador nos Eventos - Voluntário">Colaborador nos Eventos - Voluntário</option>
+											<option value="Colaborador nos Eventos - Remunerado (não disponível no momento)">Colaborador nos Eventos - Remunerado
+												(não disponível no momento)</option>
+											<option value="Desenvolvimento Web - Projeto Nova Escola">Desenvolvimento Web - Projeto Nova Escola</option>
+											<option value="Design e/ou Publicidade - Evento Oficina Urbana">Design e/ou Publicidade - Evento Oficina Urbana</option>
+											<option value="Design e/ou Publicidade - Evento Solos For Change">Design e/ou Publicidade - Evento Solos For Change</option>
+											<option value="Design e/ou Publicidade - Projeto Nova Escola">Design e/ou Publicidade - Projeto Nova Escola</option>
+											<option value="Educação - Evento Oficina Urbana">Educação - Evento Oficina Urbana</option>
+											<option value="Eventos e Produções - Projeto Nova Escola">Eventos e Produções - Projeto Nova Escola</option>
+											<option value="Gerência de Projetos - Projeto Nova Escola">Gerência de Projetos - Projeto Nova Escola</option>
+											<option value="Liderança - Projeto Nova Escola">Liderança - Projeto Nova Escola</option>
+											<option value="Negócios e/ou Legalidade - Projeto Nova Escola">Negócios e/ou Legalidade - Projeto Nova Escola</option>
+											<option value="Relações Públicas - Projeto Nova Escola">Relações Públicas - Projeto Nova Escola</option>
+										</select>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item ss-item-required ss-text">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_1214273889">
+											<div class="ss-q-title">
+												Quantas horas por semana você pretende dedicar à causa 
+												<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+												<span class="ss-required-asterisk" aria-hidden="true">*</span>
+											</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<input type="text" name="entry.1214273889" value="" class="ss-q-short required form-control" id="entry_1214273889" dir="auto"
+											aria-label="Quantas horas por semana você pretende dedicar à causa  " aria-required="true" required="" title="">
+										<div class="error-message" id="1954816572_errorMessage"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item ss-item-required ss-text">
+									<div class="ss-form-entry">
+										<label class="ss-q-item-label" for="entry_813903309">
+											<div class="ss-q-title">
+												Quais os melhores dias da semana para você dedicar-se à causa 
+												<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> 
+												<span class="ss-required-asterisk" aria-hidden="true">*</span>
+											</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<input type="text" name="entry.813903309" value="" class="ss-q-short form-control"
+											id="entry_813903309" dir="auto" aria-label="Quais os melhores dias da semana para você dedicar-se à causa  " aria-required="true"
+											required="" title="">
+										<div class="error-message" id="255406966_errorMessage"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<br>
+						<input type="hidden" name="draftResponse" value="[,,&quot;-8885417864779979106&quot;]">
+						<input type="hidden" name="pageHistory" value="0">
+						<input type="hidden" name="fvv" value="0">
+						<input type="hidden" name="fbzx" value="-8885417864779979106">
+						<div class="ss-item ss-navigate">
+							<table id="navigation-table">
+								<tbody>
+									<tr>
+										<td class="ss-form-entry" id="navigation-buttons" dir="ltr">
+											<input class="form-control btn btn-default"  name="submit" value="Enviar" id="ss-submit">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</ol>
+						<p>Utilizamos a ferramenta <a href="http://www.slack.com">Slack</a> para colaboração</p>
+				</div>
+			</form>
+		</div>
+
+		<div id="collab-confirm" class="col col-md-5 col-form" name="collab-confirm">
+			<h2>Obrigado pelo interesse! Dentro de instantes você receberá o convite para os canais de colaboração nova-escola.slack.com</h2>
+		</div>
+
+		<div class="col col-md-1"></div>
+		<div class="col col-md-6">
+			<p><h1 class="call">Quero Colaborar</h1></p>
+			<p><h2>Interessado em Fazer a Diferença na vida de um cidadão Teresinense? O projeto Nova Escolas só funciona com o apoio massivo da população literada. Com o seu apoio.</h2></p>
+			<p><h2>Para saber mais detalhes de como você pode colaborar, preencha os campos à esquerda e entraremos em contato com você.</h2></p>
+		</div>
+		
+	</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+		    $('#ss-submit').click(function() {
+		        $.ajax({
+		            type: 'POST',
+		            url: 'https://docs.google.com/forms/d/1HTX7iECDdedxWi2qI3Oase2jFoZEIKi6cfNX9CWK2HE/formResponse',
+		            data: { 'entry.1037655008': $('#entry_1037655008').val(), 
+		                    'entry.1485670716': $('#entry_1485670716').val(),
+		                    'entry.738745891' : $('#entry_738745891').val(),
+		                    'entry.1311325227': $('#entry_1311325227').val(),
+		                    'entry.738745891': $('#entry_738745891').val(),
+		                    'entry.1214273889': $('#entry_1214273889').val(),
+		                    'entry.813903309': $('#entry_813903309').val(),
+		                    'draftResponse'	: '[,,&quot;-8885417864779979106&quot;]',
+		                    'pageHistory' : 0,
+		                    'fvv':0,
+		                    'fbzx' : '-8885417864779979106'}
+		        });
+				$('#collab-form').css('display', 'none');
+				$('#collab-confirm').css('display', 'block');
+		    }); 
+		});
+	</script>
+	
+	<div class="container-fluid">
+		<div class="row row-fluid row-outter row-footer">
+			<div class="row row-fluid">
+				<div class="col col-md-1"></div>
+				<div class="col col-md-3">
+					<ul>
+						<li><a href="#about">Programa de Bolsas de Estudo</a></li>
+						<li><a href="primeira-feira-de-ciencias-integrada">1<sup>a</sup> Oficina Urbana</a></li>
+						<li><a href="primeiro-solos-for-change-the">1<sup>o</sup> Solos For Change Teresina</a></li>
+					</ul>
+				</div>
+				<div class="col col-md-3">
+					<ul>
+						<li><a href="#collab">Como Colaborar</a></li>
+						<li><a href="blog">Blog Nova Escola</a></li>
+					</ul>
+				</div>
+				<div class="col col-md-3">
+					<div>
+					  <ul>
+						<li><a href="https://www.facebook.com/Projeto-Nova-Escola-1481866395448203">@projetonovaescola on facebook</a>
+						</li>
+						<li><a href="mailto:nova.escola.the@gmail.com">@projetonovaescola on gmail</a></li>
+					  </ul> 
+					</div>
+				</div>
+				<div class="col col-md-1">
+							<div class="fb-like" data-href="https://www.facebook.com/Projeto-Nova-Escola-1481866395448203" data-width="100" 
+								data-layout="button" data-action="like" data-show-faces="false" data-share="true">
+							</div>
+				</div>
+			</div>
+			<div class="row row-fluid">
+				<div class="col col-md-9"></div>
+				<div class="col col-md-3">
+					powered by:
+					<spam class="nova-geracao"><a href="#">nova geracao</a></spam>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

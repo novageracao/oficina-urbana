@@ -23,6 +23,15 @@
     </servlet-mapping>
     
     <servlet>
+        <servlet-name>getengaged</servlet-name>
+        <servlet-class>br.edu.ifpi.novaescola.GetEngagedServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getengaged</servlet-name>
+        <url-pattern>/colaborar</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>blog</servlet-name>
         <servlet-class>br.edu.ifpi.novaescola.BlogServlet</servlet-class>
     </servlet>
@@ -31,24 +40,6 @@
         <url-pattern>/blog</url-pattern>
     </servlet-mapping>
         
-    <servlet>
-        <servlet-name>solos-for-change</servlet-name>
-        <servlet-class>br.edu.ifpi.novaescola.SolosForChangeServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>solos-for-change</servlet-name>
-        <url-pattern>/solos-for-change</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>primeiro-solos-for-change-teresina</servlet-name>
-        <servlet-class>br.edu.ifpi.novaescola.SolosForChangeTheServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>primeiro-solos-for-change-teresina</servlet-name>
-        <url-pattern>/primeiro-solos-for-change-teresina</url-pattern>
-    </servlet-mapping>
-    
     <servlet>
         <servlet-name>feira-de-ciencias-integrada</servlet-name>
         <servlet-class>br.edu.ifpi.novaescola.ScienceFairServlet</servlet-class>
