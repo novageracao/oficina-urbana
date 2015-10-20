@@ -14,6 +14,15 @@
     </servlet-mapping>
     
     <servlet>
+        <servlet-name>know-more</servlet-name>
+        <servlet-class>br.edu.ifpi.novaescola.KnowMoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>know-more</servlet-name>
+        <url-pattern>/saber-mais</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>quem-somos</servlet-name>
         <servlet-class>br.edu.ifpi.novaescola.AboutUsServlet</servlet-class>
     </servlet>

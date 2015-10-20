@@ -22,20 +22,17 @@
 			padding-top: 50px;
 			padding-bottom: 50px;
 		}
-		.row-main-banner {
-			margin-top: -3px;
-			background:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),  url("img/notepad_md.png") fixed; 
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-		}
-		
+		/* FOOTER */
 		.row-footer{
 			background-color: #e9e9e9;
 			min-height: 150px;
 		}
 		.row-footer li {
 			list-style-type: none;
+		}
+		.nova-geracao {
+		    text-align: right;
+		    margin-right: 50px;
 		}
 		.nova-geracao a{
 			font-family: "Audiowide", cursive;
@@ -48,6 +45,28 @@
 		.nova-geracao a:hover{
 			text-decoration: none;
 		}
+		
+		/* NAVBAR */
+		.navbar-no-opaque{
+			background-color: #e0e0e0;
+			opacity: 0.9;
+			border-width: 0px;
+			font-weight: 800;
+		}
+		.navbar-no-opaque img{
+			height: 45px;
+			margin-top: -10px;
+		}
+		
+		/* MAIN */
+		.row-main-banner {
+			margin-top: -3px;
+			background:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),  url("img/notepad_md.png") fixed; 
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		
 		.blockquote{
 			font-size: 25px;
 			font-style: italic;
@@ -60,23 +79,17 @@
 		.blockquote .fa{
 			font-size: 35px;
 		}
-		.row-main-banner, .row-about-project{
+		.row-main-banner{
 			color: #ffffff;
 			background-color: #99cc33;
 		}
-		.navbar-no-opaque{
-			background-color: #e0e0e0;
-			opacity: 0.9;
-			border-width: 0px;
-			font-weight: 800;
-		}
-		.navbar-no-opaque img{
-			height: 45px;
-			margin-top: -10px;
-		}
+		
 		.headline a{
 			color: #ffffff;
-			text-decoration: underline;
+			border-bottom: 1px solid;
+		}
+		.headline a:hover{
+			text-decoration: none;
 		}
 		.row-creatv{
 				position: relative;
@@ -124,18 +137,7 @@
 			background-color: #99cc33;
 			color: #ffffff;
 		}
-		.row-about-project img{
-			height: 100px;
-			width: 100px;
-		}
-		.row-about-project img, .row-about-project a{
-			display: block;
-		    margin-left: auto;
-		    margin-right: auto ;
-		}
-		.row-about-project h2{
-			text-align: center;
-		}
+		
 		.call{
 			font-size: 55px;
 			margin-top: 100px;
@@ -143,15 +145,20 @@
 		.row-connections{
 			background-color: #4D94B2;
 		}
-		.row-connections h1{
+		.row-connections h1,
+		.row-connections h4,
+		.row-connections p{
 			color: #ffffff;
 		}
-		.row-connections .connections-node:hover{
-			margin-left:
-		
-			-ms-transform: scale(1.1); /* IE 9 */
-		    -webkit-transform: scale(1.1); /* Safari */
-		    transform: scale(1.1);
+		.row-connections .badge{
+		    color: #4D94B2;
+		    background-color: #ffffff;
+		}
+		.connections-node a{
+			outline: none;
+		}
+		.col-connections{
+			text-align: center;
 		}
 		.popover-title{
 			font-weight: bold;
@@ -169,14 +176,19 @@
 		.headline >.hl-main{
 				line-height: normal;
 		}
+		.data-descr{
+			display: none;
+		}
 		@media screen and (max-width: 480px){
-			.btn, .btn-default{
-				width: 100%;
-			}
+			/* NAVBAR */
 			.navbar-no-opaque img{
 				content: url('img/logo_xm.png');
 				height: 50px;
 				margin-top: -15px;
+			}
+
+			.btn, .btn-default{
+				width: 100%;
 			}
 			.headline >.hl-main{
 				font-size: 25px;
@@ -214,17 +226,23 @@
 			.row-emotion img{
 				max-height: 200px;
 			}
+			.row-connections .connections-node img{
+				max-height: 120px;
+				max-width: 140px;
+			}
 		}
-		@media screen and (max-width: 969px){
+		@media screen and (max-width: 970px){
 			.col-banner{
 				margin-top: 20px;
 			}
+			
+			/* NAVBAR */
 			.navbar-no-opaque img{
 				height: 35px;
 				margin-top: -10px;
 			}
 		}
-		@media screen and (min-width: 481px) and (max-width: 749px) {
+		@media screen and (min-width: 480px) and (max-width: 750px) {
 			.headline > .hl-main{
 				font-size: 30px;
 			}
@@ -258,12 +276,12 @@
 			.headline > .hl-expand{
 				font-size: 20px;
 			}
-			.row-connections .connections-node{
+			.row-connections .connections-node img{
 				max-height: 100px;
 				max-width: 120px;
 			}
 		}
-		@media screen and (max-width: 749px) {
+		@media screen and (max-width: 750px) {
 			.row-main-banner {
 				background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),  url("img/notepad_sm.png") ; 
 				background-repeat: no-repeat;
@@ -273,6 +291,9 @@
 			
 		}
 		@media screen and (min-width: 570px){
+			#conn-header p{
+				text-align: center;			
+			}
 			#connections-img{
 				width: 100%;
 			}
@@ -283,8 +304,8 @@
 			}
 			#university-img{
 				position: absolute;
-				bottom: 15%;
-				right: 5%;
+				bottom: 5%;
+				right: 0;
 			}
 			#school-bus-img{
 				position: absolute;
@@ -306,18 +327,51 @@
 				left: 30%;
 				bottom: 0;
 			}
+			.connections-node .data-thumbnail img:hover{
+				-ms-transform: scale(1.1); /* IE 9 */
+			    -webkit-transform: scale(1.1); /* Safari */
+			    transform: scale(1.1);
+			}
 		}
-		@media screen and (max-width: 569px){
+		@media screen and (max-width: 570px){
 			#connections-img{
 				display: none;
 			}
-			.row-connections .connections-node{
+			#conn-header{
+				margin-bottom: 30px;
+			}
+			#conn-header p{
+				display: none;
+			}
+			.row-connections .connections-node img{
 				max-height: 80px;
 				max-width: 100px;
 			}
+			.connections-node{
+				overflow: auto;
+			}
+			.col-connections {
+				text-align: left;
+			}
+			.col-connections .badge{
+				display: none;
+			}
+			.data-descr{
+				display: block;
+				width: 75%;
+				float: right;
+			}
+			.data-title{
+				font-weight: bold;
+			}
+			.data-thumbnail{
+				text-align: center;
+				width: 25%;
+				float: left;
+			}
 		}
-		@media screen and (min-width: 570px) and (max-width: 749px){
-			.row-connections .connections-node{
+		@media screen and (min-width: 570px) and (max-width: 750px){
+			.row-connections .connections-node img{
 				max-height: 80px;
 				max-width: 100px;
 			}
@@ -348,11 +402,11 @@
 	    </div> 
 	    <div class="collapse navbar-collapse" id="navbar-content">
 		  	<ul class="nav navbar-nav navbar-right">
-		        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+		        <li class="active"><a>Home<span class="sr-only">(current)</span></a></li>
 		  		<li><a href="quem-somos">Quem Somos</a></li>
-		        <li><a href="saber-mais">Saber Mais</a></li>
-		        <li><a href="colaborar">Colaborar</a></li>
-		        <li><a href="blog">Blog</a></li>
+		        <li><a>Saber Mais</a></li>
+		        <li><a>Colaborar</a></li>
+		        <li><a>Blog</a></li>
 	        </ul>
 	    </div>
 	  </div>
@@ -444,32 +498,85 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 	<div class="container-fluid">
 		<div class="row row-fluid row-outter row-connections">
 			<div class="col col-md-12">
-				<h1>Conexões são mais importantes que Instalações Físicas</h1>
-				<img id="connections-img" src="img/connections_md.png">
-				<div>
-				<a role="button" tabindex="0" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-placement="right"
-						data-trigger="click" id="school-img"><img class="connections-node" src="img/school.png"></a>
+				<div id="conn-header" >
+					<h1>Conexões são mais importantes que Instalações Físicas</h1>
+					<p>Clique nos ícones abaixo para saber mais</p>
+				</div>
+				<div class="col-connections">
+					<img id="connections-img" src="img/connections_md.png">
+					<div id="school-img" class="connections-node">
+						<span class="badge">Escola</span>
+						<div class="data-thumbnail">
+							<a role="button" tabindex="0" data-toggle="popover" data-placement="right"
+									data-trigger="focus"><img src="img/school.png"></a>
 						</div>
-						<div>
-				<a role="button" tabindex="0" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-placement="left"
-						data-trigger="click" id="university-img"><img class="connections-node" src="img/university.png"></a>
+						<div class="data-descr">
+							<h4 class="data-title">Escolas</h4>
+							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
+							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
 						</div>
-						<div>
-				<a role="button" tabindex="0" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-placement="right"
-						data-trigger="click" id="school-bus-img"><img class="connections-node" src="img/school_bus.png"></a>
+					</div>
+					<div id="university-img" class="connections-node">
+						<div class="data-thumbnail">
+							<a role="button" tabindex="0" data-toggle="popover" data-placement="left"
+									data-trigger="focus"><img src="img/university.png"></a>
 						</div>
-						<div>
-				<a role="button" tabindex="0" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-placement="right"
-						data-trigger="click" id="students-img"><img class="connections-node" src="img/students.png"></a>
+							<span class="badge">Universidades</span>
+						<div class="data-descr">
+							<h4 class="data-title">Universidades</h4>
+							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
+							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
 						</div>
-						<div>
-				<a role="button" tabindex="0" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-placement="bottom"
-						data-trigger="click" id="corporations-img"><img class="connections-node" src="img/corporations.png"></a>
+					</div>
+					<div id="school-bus-img"  class="connections-node">
+						<span class="badge">Nova Escola</span>
+						<div class="data-thumbnail">
+							<a role="button" tabindex="0" data-toggle="popover" data-placement="right"
+								data-trigger="focus"><img src="img/school_bus.png"></a>
 						</div>
-						<div>
-				<a role="button" tabindex="0" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-placement="top"
-						data-trigger="click" id="family-img"><img class="connections-node" src="img/family_and_community.png"></a>
+						<div class="data-descr">
+							<h4 class="data-title">Nova Escola</h4>
+							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
+							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
 						</div>
+					</div>
+					<div id="students-img" class="connections-node">
+						<div class="data-thumbnail">
+							<a role="button" tabindex="0" data-toggle="popover" data-placement="right"
+									data-trigger="focus"><img src="img/students.png"></a>
+						</div>
+						<span class="badge">Estudantes</span>
+						<div class="data-descr">
+							<h4 class="data-title">Estudantes</h4>
+							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
+							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+						</div>
+					</div>
+					<div id="corporations-img" class="connections-node">
+						<span class="badge">Empresas</span>
+						<div class="data-thumbnail">
+							<a role="button" tabindex="0" data-toggle="popover" data-placement="bottom"
+									data-trigger="focus"><img src="img/corporations.png"></a>
+						</div>
+						<div class="data-descr">
+							<h4 class="data-title">Empresas P&D, Labs, Profissionais Independentes</h4>
+							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
+							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+						</div>
+					</div>
+					<div id="family-img" class="connections-node">
+						<div class="data-thumbnail">
+							<a role="button" tabindex="0" data-toggle="popover" data-placement="top"
+									data-trigger="focus"><img src="img/family_and_community.png"></a>
+							<span class="badge">Família</span>
+						</div>
+						<div class="data-descr">
+							<h4 class="data-title">Família e Comunidade</h4>
+							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
+							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row row-fluid row-outter row-creatv">
@@ -533,43 +640,18 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 		
 		<script type="text/javascript">
 			$(function(){
-			    $('#school-img').popover();
-			    $('#school-bus-img').popover({'template':'<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div><a href="saber-mais#atividades">Saber mais...</a></div>'});
-			    $('#students-img').popover();
-			    $('#university-img').popover();
-			    $('#corporations-img').popover();
-			    $('#family-img').popover();
+				if($(document).width() > 570){
+				    var nodes = $('.connections-node');
+				    for(i = 0 ;i < nodes.size(); i++){
+				    $(nodes[i]).find('.data-thumbnail > a').first().popover({
+				    		'title': $(nodes[i]).find('.data-descr > .data-title').first().text(),
+					    	'content': $(nodes[i]).find('.data-descr > .data-content').first().text()
+				    	});
+				    }
+				}
 			});
 		</script>
 	</div>
-	
-	<!-- <div class="container-fluid">
-	<div id="about" class="row row-fluid row-outter row-about-project">
-		<div class="col col-lg-3">
-			<img class="img-about" alt="Feira de Ciencias" src="img/science_fair.png">
-			<h2>1. Processo Seletivo</h2>
-			<p>Grupos de estudantes passam por processo seletivo para acesso às bolsas de estudo. Em uma das fases do processo seletivo, os estudantes competem em uma Feira de Ciências que envolve as Escolas Públicas de Teresina.</p>
-			<p><a class="btn btn-default" role="button" href="primeira-feira-de-ciencias-integrada">Ver Feira de Ciências</a></p>
-		</div>
-		<div class="col col-lg-3">
-			<img class="img-about" alt="Bolsa Escolar" src="img/school_backpack.png">
-			<h2>2. Bolsas Escolares</h2>
-			<p>Os estudantes que venceram a competição e passaram por demais fases do processo seletivo recebem sua premiação: Bolsas Escolares entre 50% e 70% porcento de desconto. E passam para a próxima fase do programa.</p>
-		</div>
-		<div class="col col-lg-3">
-			<img class="img-about" alt="Liderança" src="img/lemonade_stand.png">
-			<h2>3. Liderança e Eventos</h2>
-			<p>Os estudantes participam de um Programa de Lideranças voltado para jovens e de eventos de arrecadação de fundos (Fundraising), que visam transformar suas Bolsas Parciais em Bolsas Completas de Estudo.</p>
-		</div>
-		<div class="col col-lg-3">
-			<img class="img-about" alt="Inicio Aulas" src="img/keys_school.png">
-			<h2>4. Acesso a Nova Escola</h2>
-			<p>Os estudantes iniciam as Aulas em suas novas Escolas</p>
-			<p><a class="btn btn-default" role="button" href="#">Lista de Escolas</a></p>
-		</div>
-	</div>
-	</div> -->
-	
 	
 	<div class="container-fluid">
 		<div class="row row-fluid row-outter row-footer">
@@ -604,10 +686,9 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 				</div>
 			</div>
 			<div class="row row-fluid">
-				<div class="col col-md-9"></div>
-				<div class="col col-md-3">
+				<div class="nova-geracao">
 					powered by:
-					<span class="nova-geracao"><a href="#">nova geracao</a></span>
+					<br><span><a href="#">nova geracao</a></span>
 				</div>
 			</div>
 		</div>
