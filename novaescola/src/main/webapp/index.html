@@ -66,7 +66,6 @@
 			background-size: cover;
 			background-position: center;
 		}
-		
 		.blockquote{
 			font-size: 25px;
 			font-style: italic;
@@ -79,11 +78,14 @@
 		.blockquote .fa{
 			font-size: 35px;
 		}
-		.row-main-banner{
+		.row-main-banner, #row-intro, #row-continue{
 			color: #ffffff;
-			background-color: #99cc33;
+			background-color: #A68664;
 		}
-		
+		#row-continue a{
+			color: #ffffff;
+			text-decoration: underline;
+		}
 		.headline a{
 			color: #ffffff;
 			border-bottom: 1px solid;
@@ -133,11 +135,9 @@
 		.row-emotion{
 			position: relative;
 		}
-		.row-steps{
-			background-color: #99cc33;
-			color: #ffffff;
-		}
-		
+		/* .row-steps{
+			background-color: #ffffff;
+		} */
 		.call{
 			font-size: 55px;
 			margin-top: 100px;
@@ -164,7 +164,7 @@
 			font-weight: bold;
 		}
 		.cg-frame{
-			idth: 100%;
+			width: 100%;
 		}
 		.nopadding {
 		   padding: 0 !important;
@@ -254,9 +254,6 @@
 				margin-left: 50px;
 				margin-right: 50px;
 			}
-			.row-emotion img{
-				max-height: 50px;
-			}
 		}
 		@media screen and (min-width: 750px) and (max-width: 970px){
 			#emot-descr{
@@ -288,7 +285,9 @@
 				background-size: cover;
 				background-position: center;
 			}
-			
+			.row-emotion img{
+				display: none;
+			}
 		}
 		@media screen and (min-width: 570px){
 			#conn-header p{
@@ -402,11 +401,11 @@
 	    </div> 
 	    <div class="collapse navbar-collapse" id="navbar-content">
 		  	<ul class="nav navbar-nav navbar-right">
-		        <li class="active"><a>Home<span class="sr-only">(current)</span></a></li>
+		        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
 		  		<li><a href="quem-somos">Quem Somos</a></li>
-		        <li><a>Saber Mais</a></li>
-		        <li><a>Colaborar</a></li>
-		        <li><a>Blog</a></li>
+		        <li><a  href="#">Saber Mais</a></li>
+		        <li><a  href="#">Colaborar</a></li>
+		        <li><a  href="#">Blog</a></li>
 	        </ul>
 	    </div>
 	  </div>
@@ -457,44 +456,19 @@
 			<div class="blockquote">
 				<p><sup><i class="fa fa-quote-left"></i></sup> Um idéia cujo tempo chegou: [...] E se Escolas eliminassem o trabalho-ocupado (busywork) e o substituísse com projetos que fizessem a 
 				diferença para toda a comunidade? E se todos os Estudantes tivessem tempo de Pensar sobre suas maiores contribuições para seus futuros 
-				e então, quando eles terminassem o Ensino Médio, eles não estaríam simplesmente iniciando uma corrida para lugar nenhum?</p>
+				e então, quando eles terminassem o Ensino Médio, eles não estariam simplesmente iniciando uma corrida para lugar nenhum?</p>
 				<div class="cite">-- <a href="">Greg McKeown</a></div>
 			</div>
 		</div>
 	</div>
 	</div>
-	
-	<!-- <div class="container-fluid">
-	<div class="row row-fluid row-outter">
-		<div class="col col-md-1"></div>
-		<div class="col col-md-10">
-			<h1>O Nova Escola</h1>
-			<h4>O Nova Escola é destinado a Jovens no Ensino Fundamental II e Ensino Médio. O Proejto se dá em caráter complementar ao das Escolas tradicionais; utilizando-se para isso, o Paradigma Inovador da Educação.
-				Desse modo, incentiva a reflexão, experimentação e a criatividade - ao invés de métodos repetitivos - em um contexto transdisciplinar. 
-				O Projeto envolve, para tanto, Escolas Privadas, Públicas, Comunidades e Corporações interessados na causa.</h4>
-			<h2>Características das atividades desenvolvidas:</h2>
-			<ul>
-				<li>
-					<h4>O Ensino Superior (ES) deve ser uma extensão do Ensino Médio. Devendo assim, o Ensino Médio preparar o estudante para a vida 
-acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do aluno ao ES).</h4>
-				</li>
-				<li>
-					<h4>Formar Cidadãos desde cedo. Desenvolver as capacidades do aluno de relacionamento com o meio e de transformação deste.
-					Exercitando, o aluno, a cidadania de uma forma crítica e ética. (O sistema atual incentiva o preparo para testes de acesso a Instituições de Ensino Superior e posteriormente Concursos. 
-					(A conexão Escola-Aluno é para a vida, pois o sucesso do estudante no futuro depende muito de sua educação agora).</h4>
-				</li>
-					<li>
-						<h4>A conexão entre os agentes no Nova Escola é mais importante que o ambiente físico.</h4>
-					</li>
-					<li>
-						<h4>Educação humana não fragmentada, isto é, Razão não dissociada da Emoção: ajuda mútua, preocupação com o próximo, sensibilidade, tem valor indistinto do patrimônio intelectual.</h4>
-					</li>
-			</ul>
+	<div class="container-fluid">
+	<div class="row row-fluid row-outter" id="row-intro">
+		<div class="col col-md-12">
+			<h1>As Atividades desenvolvidas no Nova Escola têm as seguintes características abaixo:</h1>
 		</div>
-		<div class="col col-md-1"></div>
 	</div>
-	</div> -->
-	
+	</div>
 	<div class="container-fluid">
 		<div class="row row-fluid row-outter row-connections">
 			<div class="col col-md-12">
@@ -512,8 +486,8 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 						</div>
 						<div class="data-descr">
 							<h4 class="data-title">Escolas</h4>
-							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
-							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+							<p class="data-content">Alunos que participarao do programa Nova Escola e Pedagogos Líderes que contribuirão com planejamento pedagógico e estratégico
+ e continuarão acompanhando o desempenho dos alunos no Ensino Regular</p>
 						</div>
 					</div>
 					<div id="university-img" class="connections-node">
@@ -524,8 +498,8 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 							<span class="badge">Universidades</span>
 						<div class="data-descr">
 							<h4 class="data-title">Universidades</h4>
-							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
-							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+							<p class="data-content">Implementam acesso a Informação. Alunos desenvolvendo pesquisas científicas na Universidade recebem apoio dos Estudantes nas escolas
+pela atividade de Mentoria Nova Escola</p>
 						</div>
 					</div>
 					<div id="school-bus-img"  class="connections-node">
@@ -536,8 +510,9 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 						</div>
 						<div class="data-descr">
 							<h4 class="data-title">Nova Escola</h4>
-							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
-							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+							<p class="data-content">Reúne os estudantes interessados e selecionados para o Programa, realiza atividades interativas entre esses estudantes - que estimulem suas 
+capacidades de raciocínio, pensamento crítico e ético; provê acesso aos recursos necessários para que os estudantes desenvolvam as atividades
+projetos nos quais se envolvem</p>
 						</div>
 					</div>
 					<div id="students-img" class="connections-node">
@@ -548,8 +523,7 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 						<span class="badge">Estudantes</span>
 						<div class="data-descr">
 							<h4 class="data-title">Estudantes</h4>
-							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
-							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+							<p class="data-content">Principais agentes no Nova Escola; se engajam em projetos que contribuem para o desenvolvimento de suas habilidades e para o bem social</p>
 						</div>
 					</div>
 					<div id="corporations-img" class="connections-node">
@@ -560,8 +534,8 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 						</div>
 						<div class="data-descr">
 							<h4 class="data-title">Empresas P&D, Labs, Profissionais Independentes</h4>
-							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
-							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+							<p class="data-content">Provêm oportunidades de Estágio de Observação, produção de insights críticos sobre problemas e desafios locais e/ou promovem 
+experiências de mão-na-massa</p>
 						</div>
 					</div>
 					<div id="family-img" class="connections-node">
@@ -572,8 +546,7 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 						</div>
 						<div class="data-descr">
 							<h4 class="data-title">Família e Comunidade</h4>
-							<p class="data-content">sdfvjbajdfnjvjadjsdfuieh rghu fd df sodfho sd fbus hdfbs dsb bs b ovnadnvndjfnvjanjfvnakdfnvjandfjvn
-							jkopod jfio jwioorejgwoe giowjj iwjioe rgiowjer giwoe giojw gwre giowherughwuoehrgiowe gwiow oiwie gjowi ergowje gwoier giowe giwe gowerug hwue gwje bwijegowe oerh	</p>
+							<p class="data-content">Devem ter conhecimento do programa e apoiar os estudantes para que estes tenham um ambiente propício para seu desenvolvimento</p>
 						</div>
 					</div>
 				</div>
@@ -588,29 +561,15 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 				<a href="#" class="btn btn-default" role="button">Ver exemplos</a>
 			</div>
 		</div>
-		<div class="row row-fluid row-outter row-emotion">
-			<div class="row row-fluid" id="emot-descr">
-				<h1>Emoção é tão Importante quanto a Razão</h1>
-				<p>Educação humana não fragmentada, isto é, Razão não dissociada da Emoção: ajuda mútua, preocupação com o próximo, sensibilidade, tem valor indistinto do patrimônio intelectual.
-					Formar Cidadãos desde cedo. Desenvolver as capacidades do aluno de relacionamento com o meio e de transformação deste.
-					Exercitando, o aluno, a cidadania de uma forma crítica e ética. (O sistema atual incentiva o preparo para testes de acesso a Instituições de Ensino Superior e posteriormente Concursos. 
-					(A conexão Escola-Aluno é para a vida, pois o sucesso do estudante no futuro depende muito de sua educação agora</p>
-			</div>
-			<div class="row row-fluid">
-				<div id="emot-teen">
-					<img src="img/kids_high_five.png" class="img-responsive">
-				</div>
-				<div id="emot-adult">
-					<img src="img/handshake.png" class="img-responsive">
-				</div>
-			</div>
-		</div>
 		<div class="row row-fluid row-outter row-steps">
 			<div class="row row-fluid">
-				<h1>Cada etapa na vida nos prepara para a etapa seguinte</h1>
-				<p>O Nova Escola trabalha junto às escolas em atividades como orientações de carreiras e atividades livres
-					que ajudam o estudante a descobrir em que área(s) ele desperta mais interesse e pode desenvolver seu pleno potencial. 
-					<a>Continuar lendo...</a></p>
+				<div class="col col-md-1"></div>
+				<div class="col col-md-10">
+					<h1>Cada etapa na vida nos prepara para a etapa seguinte</h1>
+					<p>O Nova Escola trabalha junto às escolas em atividades como orientações de carreiras e atividades livres
+						que ajudam o estudante a descobrir em que área(s) ele desperta mais interesse e pode desenvolver seu pleno potencial. 
+						<a>Continuar lendo...</a></p>
+				</div>
 			</div>
 			<div class="row row-fluid">
 				<div class="col col-md-2"></div>
@@ -637,6 +596,23 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 				</div>
 			</div>
 		</div>
+		<div class="row row-fluid row-outter row-emotion">
+			<div class="row row-fluid text" id="emot-descr">
+				<h1>Emoção é tão Importante quanto a Razão</h1>
+				<p>Educação humana, não fragmentada, isto é, Razão não dissociada da Emoção: ajuda mútua, preocupação com o próximo, sensibilidade, tem valor indistinto do patrimônio intelectual.
+					Formar Cidadãos desde cedo, desenvolver as capacidades do aluno de relacionamento com o meio e de transformação deste.
+					Exercitando, o aluno, sua cidadania de uma forma crítica e ética. A conexão Escola-Aluno é para a vida, pois o sucesso do estudante no futuro depende muito de sua educação agora</p>
+			</div>
+			<div class="row row-fluid">
+				<div id="emot-teen">
+					<img src="img/kids_high_five.png" class="img-responsive">
+				</div>
+				<div id="emot-adult">
+					<img src="img/handshake.png" class="img-responsive">
+				</div>
+			</div>
+		</div>
+		
 		
 		<script type="text/javascript">
 			$(function(){
@@ -651,6 +627,12 @@ acadêmica em nível superior. (ao invés de simplesmente garantir o acesso do a
 				}
 			});
 		</script>
+	</div>
+	<div class="row row-fluid row-outter" id="row-continue">
+		<div class="col col-md-12">
+			<h1>Animador, não é?! Clique <a href="saber-mais">aqui</a> e saiba em detalhes como funciona...</h1>
+		</div>
+	</div>
 	</div>
 	
 	<div class="container-fluid">
