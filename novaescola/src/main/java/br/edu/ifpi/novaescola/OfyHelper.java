@@ -27,8 +27,7 @@ import com.googlecode.objectify.ObjectifyService;
  **/
 public class OfyHelper implements ServletContextListener {
   public static void register() {
-    ObjectifyService.register(Guestbook.class);
-    ObjectifyService.register(Greeting.class);
+//    ObjectifyService.register(Guestbook.class);
   }
 
   public void contextInitialized(ServletContextEvent event) {

@@ -7,10 +7,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
-		p{
+		.navbar-brand{
+			font-family: "Merienda", cursive;
+		}
+		p, h3, h4{
 			text-align: justify;
 		}
 		.container-main{
@@ -20,20 +24,20 @@
 		}
 		.navbar-no-opaque{
 			background-color: #e0e0e0;
-			opacity: 0.75;
+			/* opacity: 0.9; */
 			border-width: 0px;
 			font-weight: 800;
 		}
-		.navbar-no-opaque img{
+		/* .navbar-no-opaque img{
 			height: 50px;
 			margin-top: -15px;
-		}
-		@media screen and (max-width: 480px) {
+		} */
+		/* @media screen and (max-width: 480px) {
 		    .navbar-no-opaque img{
 				height: 40px;
 				margin-top: -15px;
 			}
-		}
+		} */
 		.media{
 			margin-top: 30px;
 			margin-bottom: 30px;
@@ -43,13 +47,17 @@
 			max-width: 120px;	
 			border-radius: 10px;	
 		}
+		/* FOOTER */
 		.row-footer{
 			background-color: #e9e9e9;
 			min-height: 150px;
-			margin-bottom: -10px;
 		}
 		.row-footer li {
 			list-style-type: none;
+		}
+		.nova-geracao {
+		    text-align: right;
+		    margin-right: 50px;
 		}
 		.nova-geracao a{
 			font-family: "Audiowide", cursive;
@@ -61,6 +69,38 @@
 		}
 		.nova-geracao a:hover{
 			text-decoration: none;
+		}
+		
+		.row-outter{
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		/* ROW COLLAB */
+		.row-collab{
+			min-height: 500px;
+			color: #ffffff; 
+			/* background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("img/schoolbus_md.png"); */
+			background-color: #A68664;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: center;
+		}
+		/* .row-collab .col-form{
+			background-color: rgba(233, 233, 233, 0.5);
+			border-radius: 2px;
+		} */
+		#collab-confirm{
+			display: none;
+		}
+		.call{
+			font-size: 55px;
+			margin-top: 100px;
+		}
+		.required-message{
+			display: none;
 		}
 	</style>
 </head>
@@ -83,7 +123,8 @@
 		        <span class="icon-bar"></span> 
 	      </button>
 	      <a class="navbar-brand" href="/">
-	        <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png">
+	      	NOVA ESCOLA <sup>beta</sup>
+	        <!-- <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png"> -->
 	      </a>
 	    </div> 
 	    <div class="collapse navbar-collapse" id="navbar-content">
@@ -91,7 +132,7 @@
 		        <li><a href="home">Home<span class="sr-only">(current)</span></a></li>
 		  		<li class="active"><a href="quem-somos">Quem Somos</a></li>
 		        <li><a href="saber-mais">Saber Mais</a></li>
-		        <li><a href="colaborar">Colaborar</a></li>
+		        <li><a href="quem-somos#collab">Colaborar</a></li>
 		  		<li><a href="#">Blog</a></li>
 	        </ul>
 	    </div>
@@ -99,11 +140,21 @@
 	</div>
 	
 	<div class="container-fluid container-main">
-		<div class="row row-fluid"><h2>Idealizador</h2></div>
+		<div class="row row-fluid">
+				<div class="col col-md-1"></div>
+				<div class="col col-md-10">
+					<h4>O Nova Escola funciona por Colaboração de cidadãos cativados pela idéia de promover um Educação que transceda a assimilação de conteúdos e práticas,
+					 que cause um enorme impacto positivo na vida de vários Estudantes e, em um futuro próximo, das Comunidades onde vivem, ou viveram. Você também pode <a  href="#collab">colaborar</a>
+					 e ser agente de mudança na vida desses vários cidadãos.</h4>
+				</div>
+		</div>
+		<!-- <div class="row row-fluid"><h2>Idealizador</h2></div> -->
 		<div class="container-fluid">
 			<div class="row row-fluid">
 				<div class="col col-md-1"></div>
-				<div class="col col-md-8">
+				<div class="col col-md-10">
+				<h2>Colaboradores</h2>
+				<br>
 				<div class="media">
 					<div class=" media-left">
 					    <a href="#">
@@ -112,18 +163,17 @@
 					  </div>
 					<div class="media-body">
 						<h3 class="media-heading">Ismael Sarmento</h3>
-						<p>Fundador da <a href="#">Nova Geracao Tecnologia</a>. Atua como desenvolvedor na área de Tecnologia da Informação.
+						<p>Idealizador do Nova Escola. Sócio na <a href="nova-geracao.com">Nova Geracao Tecnologia</a>. Filho de Professores, percebeu desde cedo o valor de uma Educação de qualidade. Atua como desenvolvedor na área de Tecnologia da Informação.
 							Seus outros interesses são: Desenvolvimento de Lideranças Comunitárias, e Integração de Instituições de Saúde através da Internet. Nesse, 
 							colabora ativamente com o <a href="http://i3l.gatech.edu/" target="_blank">Laboratório I3L da Georgia Tech</a>. Fato curioso: é membro da Fraternidade de 
 							Liderança <a href="http://www.ato.org/"  target="_blank">Alfa Tau Ômega</a>, capítulo Iota Delta.</p>
-						<p><a href="mailto:ismael.sarmento@innovate.gatech.com">ismael.sarmento@innovate.gatech.edu</a></p>
+						<p><a href="mailto:ismael.sarmento@nova-geracao.com">ismael.sarmento@nova-geracao.com</a></p>
 					</div>
 				</div>
 				</div>
 			</div>
 		</div>
-		<div class="row row-fluid"><h2>Colaboradores</h2></div>
-		<div class="container-fluid">
+		<!-- <div class="container-fluid">
 			<div class="row row-fluid">
 				<div class="col col-md-1"></div>
 				<div class="col col-md-8">
@@ -144,11 +194,11 @@
 				</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="container-fluid">
 			<div class="row row-fluid">
 				<div class="col col-md-1"></div>
-				<div class="col col-md-8">
+				<div class="col col-md-10">
 				<div class="media">
 					<div class=" media-left">
 					    <a href="#">
@@ -157,7 +207,7 @@
 					  </div>
 					<div class="media-body">
 						<h3 class="media-heading">Leandro Hipólito</h3>
-						<p>Leandro tem o Empreendedorismo como atividade principal. Entusiasta e estudioso de empreendedorismo, mercado de capitais e de marketing digital. 
+						<p>Leandro tem a criação de novos negócios como atividade principal e paixão. Entusiasta e estudioso de empreendedorismo, mercado de capitais e de marketing digital. 
 							Sócio no <a class="http://www.teresinacoworking.com.br/" target="_blank">Teresina Coworking - Escritório Compartilhado</a> e na 
 							<a href="http://www.hipdigital.com.br/" target="_blank">hip - Marketing e Comunicação Digital</a>.
 							Fato curioso: Em 2011, resolveu abandonar a área jurídica e, após 10 meses estudando, migrou para a área de comunicação e de empreendedorismo.</p>
@@ -167,7 +217,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid">
+		<!-- <div class="container-fluid">
 			<div class="row row-fluid">
 				<div class="col col-md-1"></div>
 				<div class="col col-md-8">
@@ -185,7 +235,221 @@
 				</div>
 				</div>
 			</div>
+		</div> -->
+		<div class="container-fluid">
+			<div class="row row-fluid">
+				<div class="col col-md-1"></div>
+				<div class="col col-md-10">
+				<div class="media">
+					<div class=" media-left">
+					    <a href="#">
+					      <img class="media-object" src="img/collaborator_5_sm.png" alt="Colaborador">
+					    </a>
+					  </div>
+					<div class="media-body">
+						<h3 class="media-heading">Stenyo Guimarães</h3>
+						<p>Stenyo é Publicitário de formação e especializando no MBA em Gestão Empresarial e Marketing, mas sempre empreendedor, atualmente atua como coordenador de Pós-Graduação da <a href="http://www.portalfar.edu.br" target="_blank">FAR</a> na área de administração, instrutor na 
+								<a href="http://fwf.teresina.pi.gov.br" target="_blank">Fundação Wall Ferraz</a> em técnicas de vendas, gestão de negócios, design gráfico e do <a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pi?codUf=19" target="_blank">Sebrae</a> nas mesmas áreas, atuando 
+								também como consultor desse último. Criador da página <a href="https://instagram.com/empreendepi" target="_blank">empreendepi</a> e <a href="https://www.facebook.com/mimimisto" target="_blank">mimimistore</a>. Tem um sonho para ser realizado: fazer como que todas as 7 bilhões de pessoas do mundo trabalhem por prazer.</p>
+						<p><a href="mailto:stenyo.guimaraes@gmail.com">stenyo.guimaraes@gmail.com</a></p>
+					</div>
+				</div>
+				</div>
+			</div>
 		</div>
+	</div>
+	
+	<div class="container-fluid">
+	<div id="collab" class="row row-fluid row-outter row-collab">
+		<div class="row row-fluid">
+			<div class="col col-md-2"></div>
+			<div class="col col-md-10">
+				<h1>Seja também um Colaborador</h1>
+				<h3>Necessitamos de colaboração principalmente para as seguintes atividades:</h3>
+				<ul>
+					<li>Colaborar na evolução das Atividades e Conexões propostas pelo Nova Escola</li>
+					<li>Expandir o acesso a informação - bibliotecas acadêmicas locais e nacionais</li>
+					<li>Manter mídias sociais - Facebook</li>
+					<li>Organização de eventos - Oficina Urbana</li>
+					<li>Agregacao de tecnologias existentes que apoiem os projetos ligados ao programa Nova Escola</li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+		<div class="col col-md-2"></div>
+		<div id="collab-form" class="col col-md-8 col-form">
+			<form method="POST" id="ss-form" target="collab_confirm" onsubmit="" role="form">
+				<div class="form-group">
+					<ol role="list" class="ss-question-list" style="padding-left: 0">
+						<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_1037655008"><div class="ss-q-title">
+											Nome e Sobrenome <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span
+												class="ss-required-asterisk" aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> 
+										<input type="text" name="entry.1037655008" value="" class="form-control ss-q-short"
+										id="entry_1037655008" dir="auto" aria-label="Nome e Sobrenome  " aria-required="true" required="" title="">
+									<div class="error-message" id="1846438005_errorMessage"></div>
+								</div>
+							</div>
+						</div>
+							<div role="listitem">
+								<div dir="auto">
+									<div class="form-group">
+										<label for="entry_1311325227">Título</label> 
+										<select name="entry.1311325227" id="entry_1311325227" aria-label="Título  " class="form-control">
+											<option value=""></option>
+											<option value="Sr.">Sr.</option>
+											<option value="Sra.">Sra.</option>
+											<option value="Srta.">Srta.</option>
+										</select>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+							<div dir="auto" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry form-group">
+									<label class="ss-q-item-label" for="entry_1485670716"><div class="ss-q-title">
+											Email <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> <span class="ss-required-asterisk"
+												aria-hidden="true">*</span>
+										</div>
+										<div class="ss-q-help ss-secondary-text" dir="auto"></div></label> <input type="text" name="entry.1485670716" value="" class="form-control ss-q-short"
+										id="entry_1485670716" dir="auto" aria-label="Email  " aria-required="true" required="" title="">
+									<div class="error-message" id="503790131_errorMessage"></div>
+								</div>
+							</div>
+						</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item ss-item-required ss-select">
+									<div class="ss-form-entry form-group">
+										<label class="ss-q-item-label" for="entry_738745891">
+											<div class="ss-q-title">
+												Qual das opções abaixo mais lhe interessa 
+												<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> 
+												<span class="ss-required-asterisk" aria-hidden="true">*</span>
+											</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<select name="entry.738745891" id="entry_738745891" class="form-control"
+											aria-label="Qual das opções abaixo mais lhe interessa  " aria-required="true" required="">
+											<option value=""></option>
+											<option value="Colaborador nos Eventos - Voluntário">Colaborador nos Eventos - Voluntário</option>
+											<option value="Colaborador nos Eventos - Remunerado (não disponível no momento)">Colaborador nos Eventos - Remunerado
+												(não disponível no momento)</option>
+											<option value="Desenvolvimento Web - Projeto Nova Escola">Desenvolvimento Web - Projeto Nova Escola</option>
+											<option value="Design e/ou Publicidade - Evento Oficina Urbana">Design e/ou Publicidade - Evento Oficina Urbana</option>
+											<option value="Design e/ou Publicidade - Evento Solos For Change">Design e/ou Publicidade - Evento Solos For Change</option>
+											<option value="Design e/ou Publicidade - Projeto Nova Escola">Design e/ou Publicidade - Projeto Nova Escola</option>
+											<option value="Educação - Evento Oficina Urbana">Educação - Evento Oficina Urbana</option>
+											<option value="Eventos e Produções - Projeto Nova Escola">Eventos e Produções - Projeto Nova Escola</option>
+											<option value="Gerência de Projetos - Projeto Nova Escola">Gerência de Projetos - Projeto Nova Escola</option>
+											<option value="Liderança - Projeto Nova Escola">Liderança - Projeto Nova Escola</option>
+											<option value="Negócios e/ou Legalidade - Projeto Nova Escola">Negócios e/ou Legalidade - Projeto Nova Escola</option>
+											<option value="Relações Públicas - Projeto Nova Escola">Relações Públicas - Projeto Nova Escola</option>
+										</select>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item ss-item-required ss-text">
+									<div class="ss-form-entry form-group">
+										<label class="ss-q-item-label" for="entry_1214273889">
+											<div class="ss-q-title">
+												Quantas horas por semana você pretende dedicar à causa 
+												<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+												<span class="ss-required-asterisk" aria-hidden="true">*</span>
+											</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<input type="text" name="entry.1214273889" value="" class="ss-q-short required form-control" id="entry_1214273889" dir="auto"
+											aria-label="Quantas horas por semana você pretende dedicar à causa  " aria-required="true" required="" title="">
+										<div class="error-message" id="1954816572_errorMessage"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<div class="ss-form-question errorbox-good" role="listitem">
+								<div dir="auto" class="ss-item ss-item-required ss-text">
+									<div class="ss-form-entry form-group">
+										<label class="ss-q-item-label" for="entry_813903309">
+											<div class="ss-q-title">
+												Quais os melhores dias da semana para você dedicar-se à causa 
+												<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label> 
+												<span class="ss-required-asterisk" aria-hidden="true">*</span>
+											</div>
+											<div class="ss-q-help ss-secondary-text" dir="auto"></div>
+										</label> 
+										<input type="text" name="entry.813903309" value="" class="ss-q-short form-control"
+											id="entry_813903309" dir="auto" aria-label="Quais os melhores dias da semana para você dedicar-se à causa  " aria-required="true"
+											required="" title="">
+										<div class="error-message" id="255406966_errorMessage"></div>
+										<div class="required-message">This is a required question</div>
+									</div>
+								</div>
+							</div>
+							<br>
+						<input type="hidden" name="draftResponse" value="[,,&quot;-8885417864779979106&quot;]">
+						<input type="hidden" name="pageHistory" value="0">
+						<input type="hidden" name="fvv" value="0">
+						<input type="hidden" name="fbzx" value="-8885417864779979106">
+						<div class="ss-item ss-navigate">
+							<table id="navigation-table">
+								<tbody>
+									<tr>
+										<td class="ss-form-entry form-group" id="navigation-buttons" dir="ltr">
+											<input class="form-control btn btn-default"  name="submit" value="Enviar" id="ss-submit">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</ol>
+						<p>Utilizamos a ferramenta <a href="http://www.slack.com">Slack</a> para colaboração</p>
+				</div>
+			</form>
+		</div>
+		</div>
+
+		<div id="collab-confirm" class="col col-md-8 col-form" name="collab-confirm">
+			<h2>Obrigado pelo interesse! Dentro de instantes você receberá o convite para os canais de colaboração nova-escola.slack.com</h2>
+		</div>
+
+		<div class="col col-md-2"></div>
+		<!-- <div class="col col-md-6">
+			<p><h1 class="call">Quero Colaborar</h1></p>
+			<p><h2>Interessado em Fazer a Diferença na vida de um cidadão Teresinense? O projeto Nova Escolas só funciona com o apoio massivo da população literada. Com o seu apoio.</h2></p>
+			<p><h2>Para saber mais detalhes de como você pode colaborar, preencha os campos à esquerda e entraremos em contato com você.</h2></p>
+		</div> -->
+		
+	</div>
+	<script type="text/javascript">
+		$(function() {
+		    $('#ss-submit').click(function() {
+		        $.ajax({
+		            type: 'POST',
+		            url: 'https://docs.google.com/forms/d/1HTX7iECDdedxWi2qI3Oase2jFoZEIKi6cfNX9CWK2HE/formResponse',
+		            data: { 'entry.1037655008': $('#entry_1037655008').val(), 
+		                    'entry.1485670716': $('#entry_1485670716').val(),
+		                    'entry.738745891' : $('#entry_738745891').val(),
+		                    'entry.1311325227': $('#entry_1311325227').val(),
+		                    'entry.738745891': $('#entry_738745891').val(),
+		                    'entry.1214273889': $('#entry_1214273889').val(),
+		                    'entry.813903309': $('#entry_813903309').val(),
+		                    'draftResponse'	: '[,,&quot;-8885417864779979106&quot;]',
+		                    'pageHistory' : 0,
+		                    'fvv':0,
+		                    'fbzx' : '-8885417864779979106'}
+		        });
+				$('#collab-form').css('display', 'none');
+				$('#collab-confirm').css('display', 'block');
+		    }); 
+		});
+	</script>
 	</div>
 
 	<div class="container-fluid">
@@ -221,10 +485,9 @@
 				</div>
 			</div>
 			<div class="row row-fluid">
-				<div class="col col-md-9"></div>
-				<div class="col col-md-3">
+				<div class="nova-geracao">
 					powered by:
-					<spam class="nova-geracao"><a href="#">nova geracao</a></spam>
+					<br><span><a href="#">nova geracao</a></span>
 				</div>
 			</div>
 		</div>

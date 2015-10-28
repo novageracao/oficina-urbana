@@ -7,16 +7,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Maven+Pro:900' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
+		.navbar-brand{
+			font-family: "Merienda", cursive;
+		}
 		.text p{
 			text-align: justify;
-		}
-		.required-message{
-			display: none;
 		}
 		.row-outter{
 			padding-top: 50px;
@@ -49,14 +49,14 @@
 		/* NAVBAR */
 		.navbar-no-opaque{
 			background-color: #e0e0e0;
-			opacity: 0.9;
+			/* opacity: 0.9; */
 			border-width: 0px;
 			font-weight: 800;
 		}
-		.navbar-no-opaque img{
+		/* .navbar-no-opaque img{
 			height: 45px;
 			margin-top: -10px;
-		}
+		} */
 		
 		/* MAIN */
 		.row-main-banner {
@@ -181,11 +181,11 @@
 		}
 		@media screen and (max-width: 480px){
 			/* NAVBAR */
-			.navbar-no-opaque img{
+			/* .navbar-no-opaque img{
 				content: url('img/logo_xm.png');
 				height: 50px;
 				margin-top: -15px;
-			}
+			} */
 
 			.btn, .btn-default{
 				width: 100%;
@@ -237,10 +237,10 @@
 			}
 			
 			/* NAVBAR */
-			.navbar-no-opaque img{
+			/* .navbar-no-opaque img{
 				height: 35px;
 				margin-top: -10px;
-			}
+			} */
 		}
 		@media screen and (min-width: 480px) and (max-width: 750px) {
 			.headline > .hl-main{
@@ -396,7 +396,8 @@
 		        <span class="icon-bar"></span> 
 	      </button>
 	      <a class="navbar-brand" href="/">
-	        <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png">
+	      	NOVA ESCOLA <sup>beta</sup>
+	        <!-- <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png"> -->
 	      </a>
 	    </div> 
 	    <div class="collapse navbar-collapse" id="navbar-content">
@@ -563,8 +564,8 @@ experiências de mão-na-massa</p>
 		</div>
 		<div class="row row-fluid row-outter row-steps">
 			<div class="row row-fluid">
-				<div class="col col-md-1"></div>
-				<div class="col col-md-10">
+				<div class="col col-sm-1"></div>
+				<div class="col col-sm-10">
 					<h1>Cada etapa na vida nos prepara para a etapa seguinte</h1>
 					<p>O Nova Escola trabalha junto às escolas em atividades como orientações de carreiras e atividades livres
 						que ajudam o estudante a descobrir em que área(s) ele desperta mais interesse e pode desenvolver seu pleno potencial. 
@@ -572,26 +573,26 @@ experiências de mão-na-massa</p>
 				</div>
 			</div>
 			<div class="row row-fluid">
-				<div class="col col-md-2"></div>
-				<div class="col col-md-3 nopadding">
+				<div class="col col-sm-2"></div>
+				<div class="col col-sm-3 nopadding">
 					<img alt="Quadro 1" src="img/charge.png" class="img-responsive cg cg-frame">
 				</div>
-				<div class="col col-md-3 nopadding">
+				<div class="col col-sm-3 nopadding">
 					<img alt="Quadro 2" src="img/charge.png" class="img-responsive cg cg-frame">
 				</div>
-				<div class="col col-md-3 nopadding">
+				<div class="col col-sm-3 nopadding">
 					<img alt="Quadro 3" src="img/charge.png" class="img-responsive cg cg-frame">
 				</div>
 			</div>
 			<div class="row row-fluid">
-				<div class="col col-md-2"></div>
-				<div class="col col-md-3 nopadding">
+				<div class="col col-sm-2"></div>
+				<div class="col col-sm-3 nopadding">
 					<img alt="Quadro 4" src="img/charge.png" class="img-responsive cg cg-frame">
 				</div>
-				<div class="col col-md-3 nopadding">
+				<div class="col col-sm-3 nopadding">
 					<img alt="Quadro 5" src="img/charge.png" class="img-responsive cg cg-frame">
 				</div>
-				<div class="col col-md-3 nopadding">
+				<div class="col col-sm-3 nopadding">
 					<img alt="Quadro 6" src="img/charge.png" class="img-responsive cg cg-frame">
 				</div>
 			</div>
@@ -632,7 +633,6 @@ experiências de mão-na-massa</p>
 		<div class="col col-md-12">
 			<h1>Animador, não é?! Clique <a href="saber-mais">aqui</a> e saiba em detalhes como funciona...</h1>
 		</div>
-	</div>
 	</div>
 	
 	<div class="container-fluid">
