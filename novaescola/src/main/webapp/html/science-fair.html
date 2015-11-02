@@ -6,10 +6,14 @@
 	<title>1a Oficina Urbana Teresina</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
+		.navbar-brand{
+			font-family: "Merienda", cursive;
+		}
 		.row-outter{
 			padding-top: 50px;
 			padding-bottom: 50px;
@@ -86,16 +90,26 @@
 		        <span class="icon-bar"></span> 
 	      </button>
 	      <a class="navbar-brand" href="/">
-	        <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png">
+	        NOVA ESCOLA <sup>beta</sup>
+	        <!-- <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png"> -->
 	      </a>
 	    </div> 
 	    <div class="collapse navbar-collapse" id="navbar-content">
 		  	<ul class="nav navbar-nav navbar-right">
-		        <li><a href="home">Home<span class="sr-only">(current)</span></a></li>
+		        <li><a href="home">Home<span class="sr-only"></span></a></li>
 		  		<li><a href="quem-somos">Quem Somos</a></li>
 		        <li><a href="saber-mais">Saber Mais</a></li>
-		        <li><a href="colaborar">Colaborar</a></li>
-		        <li><a href="blog">Blog</a></li>
+		         <li class="dropdown">
+						<a class="dropdown-toggle" role="button" id="btn-events" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Mais
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-ladelledby="btn-events">
+							<li><a href="primeira-feira-de-ciencias-integrada">Oficina Urbana</a></li>
+					        <li><a  href="quem-somos#collab">Colaborar</a></li>
+					        <li><a  href="http://ng-tecnologia.appspot.com/blog">Blog</a></li>
+						</ul>
+				</li>
 	        </ul>
 	    </div>
 	  </div>
