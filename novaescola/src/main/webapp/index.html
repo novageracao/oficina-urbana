@@ -9,24 +9,59 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
+		a{
+			cursor: pointer;
+		}
+		a:hover{
+			text-decoration: none;
+		}
 		.navbar-brand{
 			font-family: "Merienda", cursive;
 		}
 		.img-badge{
 			/* size */
 			max-height: 150px;
-			/* position */
-			position: fixed;
-			bottom: 0px;
-			right: 10px;
-			z-index: 5;
 			/* rotate */
 			-ms-transform: rotate(10deg);
 			-webkit-transform: rotate(10deg);
 			transform: rotate(10deg);
+		}
+		#event-featured{
+			text-align: right;
+		}
+		
+		.ad{
+			width: 100%;
+			position: fixed;
+			bottom: 0px;
+			z-index: 3;
+		}
+		.event-featured-badge {
+		    float: right;
+		}
+		.solos-for-change{
+			display: none;
+			text-align: center;
+			font-family: Lobster Two, cursive;
+			background-color: yellow;
+		}
+		.solos-for-change a{
+			color: #000000;
+		}
+		#close-event-featured{
+			background-color: rgba(255, 255, 255, 0.5);
+			    color: #000000;
+			    border: #000000 1px solid;
+			    padding: 0 4px 0 4px;
+			    border-radius: 10px;
+			    position: absolute;
+			    z-index: 4;
+			    margin-left: -20px;
+			    margin-bottom: -30px;
 		}
 		.link-scalable img:hover{
 				-ms-transform: scale(1.1); /* IE 9 */
@@ -178,6 +213,9 @@
 		.col-connections{
 			text-align: center;
 		}
+		.popover{
+			min-width: 300px;
+		}
 		.popover-title{
 			font-weight: bold;
 		}
@@ -253,12 +291,9 @@
 			.col-banner{
 				margin-top: 20px;
 			}
-			
-			/* NAVBAR */
-			/* .navbar-no-opaque img{
-				height: 35px;
-				margin-top: -10px;
-			} */
+			.img-badge{
+				max-height: 100px;
+			}
 		}
 		@media screen and (min-width: 480px) and (max-width: 750px) {
 			.headline > .hl-main{
@@ -304,6 +339,12 @@
 				background-position: center;
 			}
 			.row-emotion img{
+				display: none;
+			}
+			.solos-for-change{
+				display: block;
+			}
+			.event-featured-badge{
 				display: none;
 			}
 		}
@@ -463,10 +504,24 @@
 					<a role="button" class="btn btn-default"  href="colaborar">Quero Colaborar</a>
 			</div>
 		</div>
-		<a href="http://www.solosforchange.appspot.com" class="link-scalable">	<img alt="image" src="img/sfc_badge.png" class="img-responsive img-badge"></a>
+		<div class="ad">
+			<div id="event-featured">
+				<a id="close-event-featured"><i class="fa fa-times"></i></a>
+				<a href="http://www.solosforchange.appspot.com" class="link-scalable event-featured-badge">	
+					<img alt="image" src="img/sfc_badge.png" class="img-responsive img-badge">
+				</a>
+			</div>
+			<div class="row row-fluid solos-for-change">
+				<h2><a href="http://www.solosforchange.appspot.com">1<sup>o</sup> Solos for Change - Jan '16</a></h2>
+			</div>
+		</div>
 		<div class="col col-md-2"></div>
 		
 		<script type="text/javascript">
+			$('#close-event-featured').click(function(){
+				$('.ad').hide();
+			});
+		
 			$(function(){
 				$('.headline a.hl-expand').click(function(){
 					var cont = $(this).siblings('.hl-cont');
@@ -704,7 +759,7 @@ experiências de mão-na-massa</p>
 			<div class="row row-fluid">
 				<div class="nova-geracao">
 					powered by:
-					<br><span><a href="#">nova geracao</a></span>
+					<br><span><a href="http://www.ng-tecnologia.appspot.com">nova geracao</a></span>
 				</div>
 			</div>
 		</div>
