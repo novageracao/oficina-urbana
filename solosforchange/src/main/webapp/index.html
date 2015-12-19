@@ -8,11 +8,37 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:300,200' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
+		body{
+			font-family: 'Work Sans', sans-serif;
+			font-weight: 200;
+		}
 		 #sfc-the p, #sfc-the h1, #sfc-the h2, #sfc-the h3, #sfc-the h4{
 			text-align: justify;
+		}
+		.solos-for-change{
+			font-family: Lobster Two, cursive;
+		}
+		.right{
+			text-align: right;
+		}
+		.header .solos-for-change{
+			color: #000000;
+			font-size: 30px;
+		}
+		.solos-for-change img{
+			height: 60px;
+		}
+		.img-link{
+			cursor: pointer;
+		}
+		.header{
+			text-align: center;
+			height: 80px;
 		}
 		.row-outter{
 			padding-top: 50px;
@@ -27,6 +53,9 @@
 		}
 		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
 			-webkit-filter: brightness(0.4);
+		}
+		.artist-about{
+			display: none;
 		}
 		.row-footer{
 			background-color: #e9e9e9;
@@ -117,29 +146,14 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	<div class="navbar navbar-default navbar-fixed-top navbar-no-opaque" role="navigation">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span> 
-	      </button>
-	      <a class="navbar-brand" href="/">
-	        <img class="img-responsive" alt="NOVA ESCOLA" src="img/nova_escola_banner_sm.png">
-	      </a>
-	    </div> 
-	    <div class="collapse navbar-collapse" id="navbar-content">
-		  	<ul class="nav navbar-nav navbar-right">
-		        <li><a href="home">Home<span class="sr-only">(current)</span></a></li>
-		  		<li><a href="quem-somos">Quem Somos</a></li>
-		        <li><a href="primeira-feira-de-ciencias-integrada">Oficina Urbana</a></li>
-		        <li class="active"><a href="#">Solos for Change</a></li>
-		        <li><a href="blog/index.html">Blog</a></li>
-	        </ul>
-	    </div>
-	  </div>
-	</div>
+	<div class="container-fluid">
+	  	<div class="row row-fluid header">
+	  		<a class="solos-for-change" href="/">
+		  		<img src="img/solos_for_change.png">
+		        Solos for Change
+		      </a>
+	  	</div>
+  	</div>
 	
 	<div id="carousel-banner" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -152,8 +166,8 @@
           <img class="first-slide sfc-event" src="img/street_artists_md.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-	            <h1 class="call">I<sup>o</sup> SOLOS FOR CHANGE<sup><font size="5">&reg</font></sup></h1>
-	            <h1>Teresina - Nov '15</h1>
+	            <h1 class="call solos-for-change">I<sup>o</sup> Solos for Change<!-- <sup><font size="5">&reg</font></sup> --></h1>
+	            <h1>Teresina - Jan '16</h1>
             	<p><a class="btn btn-default" role="button" href="primeiro-solos-for-change-teresina#profissional">Sou Profissional</a>
             	<a class="btn btn-default" role="button" href="primeiro-solos-for-change-teresina#norumo">Faço uns Truques</a>
             	<a class="btn btn-default" role="button" href="primeiro-solos-for-change-teresina#naomusico">Não sou músico</a>
@@ -196,7 +210,7 @@
 	<div id="sfc-the" class="row row-fluid row-outter">
 		<div class="col col-md-1"></div>
 		<div class="col col-md-10">
-			<h2>Solos For Change<sup>TM</sup> é um evento Artístico Cultural onde músicos de todas as idades, de iniciantes a profissionais, executam solos em seus instrumentos em locais públicos e recebem em troca dinheiro em seus chapéus, do público presente no local.
+			<h2>Solos For Change é um evento Artístico Cultural onde músicos de todas as idades, de iniciantes a profissionais, executam solos em seus instrumentos em locais públicos e recebem em troca dinheiro em seus chapéus, do público presente no local.
 			A renda arrecadada durante o evento é destinada a uma causa social.</h2>
 			<h2>No I Solos For Change em Teresina, que está agendado para Novembro deste ano, os fundos arrecadados serão usados para a causa apoiada pelo projeto 
 			<a href="/">Nova Escola</a>, a promoção de Bolsas de Estudo em Escolas Privadas, para alunos em Escolas Públicas.</h2>
@@ -208,7 +222,7 @@
 	<div class="container-fluid">
 		<div id="subscription-announce" class="row row-fluid">
 			<div class="col col-md-2"></div>
-			<div class="col col-md-8 call">Inscrições para o I<sup>o</sup> SfC abertas a partir de 5 de Outubro</div>
+			<div class="col col-md-8 call">Inscrições para o I<sup>o</sup> Solos for Change abertas em breve!</div>
 			<div class="col col-md-2"></div>
 		</div>
 	</div>
@@ -217,70 +231,87 @@
 		<div class="container-fluid">
 			<div class="row row-fluid legend-video">
 				<div class="col col-md-1"></div>
-				<div class="col col-md-8">
-					<h2>Artista em Destaque: The Pipe Guy (O Cara dos Canos)</h2>
-					<h4>Jake Clark, ou, o Cara dos Canos, nasceu e vive no sul da Austrália. Ele toca para o público nas ruas um intrumento que ele
-					mesmo criou com canos PVC. Ele chama seu instrumento de <i>Tubulum</i> ou <i>Thongafone</i>.</h4><br>
-					<!-- <h4>Joseph Gravil é um artista de rua, que nasceu na Inglaterra e vive em Amsterdã, Holanda.</h4>
-					<h4>Ele também atende pelo nome artístico <a href="https://www.facebook.com/mexfs">MEXFS</a> e viaja pelo mundo mostrando seu trabalho artístico.</h4> -->
+				<div class="col col-md-10">
+					<h1>Artista em Destaque</h1>
+					<div id="highlight-artist">
+							<h2></h2>
+							<h4></h4><br>
+					</div>
 				</div>
 				<div class="col col-md-1"></div>
 			</div>
 			<div class="row row-fluid feature-video">
-				<iframe width="720" height="380" src="https://www.youtube.com/embed/-0gED3rn2Tc" frameborder="0" allowfullscreen></iframe>
+				<iframe width="720" height="380" src="" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="container-fluid">
 			<div class="row row-fluid row-outter">
 				<div>
-					<h1>Recentes Highlights</h1>
+					<h1>Destaques Recentes</h1>
 				</div>
-				<div>
-					<a href="https://www.youtube.com/watch?v=lyahiU6bZUw" target="_blank"><img class="img-responsive" alt="Joe Gravil" src="img/joe-gravil-thumbnail.png"></a>
+				<div class="row row-fluid slider-container">
+					<div class="col col-md-3 slider-element">
+						<div>
+							<div data-u="https://www.youtube.com/embed/kfYBktt4SNA" target="_blank" class="artist-link"><img class="img-responsive img-link" src="http://img.youtube.com/vi/kfYBktt4SNA/mqdefault.jpg "></div>
+						</div>
+						<div class="artist-name"><a id=""><b>Dave Crowe</b></a></div>
+						<div class="artist-about">O talentoso Dave Crowe se apresenta nas ruas com seu inconfundível Beatbox Dubstep - percussão vocal; também toca instrumentos como violão e gaita.
+							Junto Andy Balcon, forma a deslumbrante banda/duo Heymoonshaker. Ele consegue até mesmo fazer diversos efeitos eletrônicos com a boca, lábios, língua,
+							tornando-o referência nessa arte no mundo todo.</div>
+					</div>
+					<div class="col col-md-3 slider-element">
+						<div>
+							<div data-u="https://www.youtube.com/embed/-0gED3rn2Tc" target="_blank" class="artist-link"><img class="img-responsive img-link" src="http://img.youtube.com/vi/-0gED3rn2Tc/mqdefault.jpg"></div>
+						</div>
+						<div class="artist-name"><a id=""><b>The Pipe Guy (O Cara dos Canos)</b></a></div>
+						<div class="artist-about">Jake Clark, ou, o Cara dos Canos, nasceu e vive no sul da Austrália. Ele toca para o público nas ruas um intrumento que ele
+							mesmo criou com canos PVC. Ele chama seu instrumento de <i>Tubulum</i> ou <i>Thongafone</i>.</div>
+					</div>
+					<div class="col col-md-3 slider-element">
+						<div>
+							<div data-u="https://www.youtube.com/embed/lyahiU6bZUw" target="_blank" class="artist-link"><img class="img-responsive img-link" src="http://img.youtube.com/vi/lyahiU6bZUw/mqdefault.jpg"></div>
+						</div>
+						<div class="artist-name"><a id=""><b>Joe Gravil (MEXFS)</b></a></div>
+						<div class="artist-about">Joseph Gravil é um artista de rua, que nasceu na Inglaterra e vive em Amsterdã, Holanda.<br>
+							Ele também atende pelo nome artístico MEXFS e viaja pelo mundo mostrando seu trabalho artístico.</div>
+					</div>
 				</div>
-				<div><b>Joe Gravil (MEXFS)</b></div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function updateHighlight(highlight){
+				$('#highlight-artist > h2').text($(highlight).children('.artist-name').first().text());
+				$('#highlight-artist > h4').text($(highlight).children('.artist-about').first().text());
+				$('.feature-video > iframe').attr('src', $(highlight).find('.artist-link').attr('data-u'));				
+			}
+			
+			$('.img-link').click(function(){
+				var highlight = $(this).parents('.slider-element').first();
+				updateHighlight(highlight);
+			});
+			
+			$(function(){
+				var highlight = $('.slider-element').first();
+				updateHighlight(highlight);
+			});
+		</script>
 	</div>
 
 	<div class="container-fluid">
 		<div class="row row-fluid row-outter row-footer">
 			<div class="row row-fluid">
-				<div class="col col-md-1"></div>
-				<div class="col col-md-3">
-					<ul>
-						<li><a href="#about">Programa de Bolsas de Estudo</a></li>
-						<li><a href="primeira-feira-de-ciencias-integrada">1<sup>a</sup> Oficina Urbana</a></li>
-						<li><a href="primeiro-solos-for-change-the">1<sup>o</sup> Solos For Change Teresina</a></li>
-					</ul>
+				<div class="col col-md-2"></div>
+				<div class="col col-md-8">
+					<a href="#about">Inscrições</a>|
+					<a href="primeira-feira-de-ciencias-integrada">SOmething sss </a>|
+					<a href="https://www.facebook.com/solosforchange">Página no Facebook</a>
 				</div>
-				<div class="col col-md-3">
-					<ul>
-						<li><a href="#collab">Como Colaborar</a></li>
-						<li><a href="blog">Blog Nova Escola</a></li>
-					</ul>
-				</div>
-				<div class="col col-md-3">
-					<div>
-					  <ul>
-						<li><a href="https://www.facebook.com/Projeto-Nova-Escola-1481866395448203">@projetonovaescola on facebook</a>
-						</li>
-						<li><a href="mailto:nova.escola.the@gmail.com">@projetonovaescola on gmail</a></li>
-					  </ul> 
-					</div>
-				</div>
-				<div class="col col-md-1">
-							<div class="fb-like" data-href="https://www.facebook.com/Projeto-Nova-Escola-1481866395448203" data-width="100" 
-								data-layout="button" data-action="like" data-show-faces="false" data-share="true">
-							</div>
+				<div class="col col-md-2">
 				</div>
 			</div>
-			<div class="row row-fluid">
-				<div class="col col-md-9"></div>
-				<div class="col col-md-3">
+			<div class="row row-fluid right">
 					powered by:
-					<spam class="nova-geracao"><a href="#">nova geracao</a></spam>
-				</div>
+					<spam class="nova-geracao"><a href="http://www.ng-tecnologia.appspot.com">nova geracao</a></spam>
 			</div>
 		</div>
 	</div>

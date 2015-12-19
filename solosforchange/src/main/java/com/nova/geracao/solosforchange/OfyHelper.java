@@ -29,8 +29,8 @@ import javax.servlet.ServletContextEvent;
  **/
 public class OfyHelper implements ServletContextListener {
   public static void register() {
-    ObjectifyService.register(Guestbook.class);
-    ObjectifyService.register(Greeting.class);
+//    ObjectifyService.register(Guestbook.class);
+//    ObjectifyService.register(Greeting.class);
   }
 
   public void contextInitialized(ServletContextEvent event) {
