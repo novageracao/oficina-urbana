@@ -22,6 +22,15 @@
         <url-pattern>/primeiro-solos-for-change-teresina</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+       <servlet-name>blog</servlet-name>
+      <servlet-class>com.nova.geracao.solosforchange.BlogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>blog</servlet-name>
+      <url-pattern>/blog</url-pattern>
+    </servlet-mapping>
+    
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

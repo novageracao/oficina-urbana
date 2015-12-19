@@ -52,7 +52,12 @@
 		    max-height: 100%;
 		}
 		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+			width: 100%;
+			filter: brightness(0.4);
 			-webkit-filter: brightness(0.4);
+			-moz-filter:  brightness(0.4);
+			-o-filter:  brightness(0.4);
+			-ms-filter:  brightness(0.4);
 		}
 		.artist-about{
 			display: none;
@@ -138,14 +143,7 @@
 </head>
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
+	
 	<div class="container-fluid">
 	  	<div class="row row-fluid header">
 	  		<a class="solos-for-change" href="/">
@@ -163,7 +161,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide sfc-event" src="img/street_artists_md.png" alt="First slide">
+          <img class="first-slide sfc-event loading-lg-img" data-u="img/street_artists_md.png" src="img/street_artists_thumbnail.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
 	            <h1 class="call solos-for-change">I<sup>o</sup> Solos for Change<!-- <sup><font size="5">&reg</font></sup> --></h1>
@@ -176,7 +174,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide blog-post" src="img/10_rules_street_artist_md.png" alt="Third slide">
+          <img class="second-slide blog-post loading-lg-img" data-u="img/10_rules_street_artist_md.png" src="img/10_rules_street_artist_thumbnail.png" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1><b>Algumas Dicas Para Quando For Tocar Na Rua</b></h1>
@@ -186,10 +184,10 @@
           </div>
         </div>
         <div class="item">
-          	<img class="third-slide artist-highlight" src="img/player_highlight_md.png" alt="Second slide">
+          	<img class="third-slide artist-highlight loading-lg-img" data-u="img/player_highlight_md.png" src="img/player_highlight_thumbnail.png" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-            	<h1 class="call">O Cara dos Canos</h1>
+            	<h1 class="call">Dave Crowe</h1>
             	<h2>Artista em destaque</h2>
             	<a href="#artist-highlight" class="btn btn-default" role="button">Assistir Performance</a>
             </div>
@@ -204,6 +202,19 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+      <script type="text/javascript">
+      	var imgs = $('.loading-lg-img');
+      	$(imgs).each(function(){
+          	this.style.webkitFilter = "blur(5px) brightness(0.4)";
+          	var tn= $(this);
+      		var img = new Image(), src = tn.attr('data-u');
+          	img.onload = function() {
+    	        tn.replaceWith(img);
+          		img.style.webkitFilter = "blur(0px) brightness(0.4)";
+    	    }
+          	img.src = src;
+      	}); 
+      </script>
     </div>	
 	
 	<div class="container-fluid">
@@ -212,8 +223,9 @@
 		<div class="col col-md-10">
 			<h2>Solos For Change é um evento Artístico Cultural onde músicos de todas as idades, de iniciantes a profissionais, executam solos em seus instrumentos em locais públicos e recebem em troca dinheiro em seus chapéus, do público presente no local.
 			A renda arrecadada durante o evento é destinada a uma causa social.</h2>
-			<h2>No I Solos For Change em Teresina, que está agendado para Novembro deste ano, os fundos arrecadados serão usados para a causa apoiada pelo projeto 
-			<a href="/">Nova Escola</a>, a promoção de Bolsas de Estudo em Escolas Privadas, para alunos em Escolas Públicas.</h2>
+			<h2>No I<sup>o</sup> Solos For Change em Teresina, que acontecerá em Janeiro de 2016, os fundos arrecadados serão usados para a causa apoiada pelo projeto 
+			<a href="http://www.oficina-urbana.appspot.com">Oficina Urbana</a>, a formação de Novos Líderes que irão impactar a vida de milhares de pessoas através dos diversos projetos que irão desenvolver
+			junto às suas comunidades.</h2>
 		</div>
 		<div class="col col-md-1"></div>
 	</div>
@@ -222,7 +234,7 @@
 	<div class="container-fluid">
 		<div id="subscription-announce" class="row row-fluid">
 			<div class="col col-md-2"></div>
-			<div class="col col-md-8 call">Inscrições para o I<sup>o</sup> Solos for Change abertas em breve!</div>
+			<div class="col col-md-8 call"><a href="primeiro-solos-for-change-teresina">Inscrições</a> para o I<sup>o</sup> Solos for Change abertas em breve!</div>
 			<div class="col col-md-2"></div>
 		</div>
 	</div>
@@ -302,16 +314,16 @@
 			<div class="row row-fluid">
 				<div class="col col-md-2"></div>
 				<div class="col col-md-8">
-					<a href="#about">Inscrições</a>|
-					<a href="primeira-feira-de-ciencias-integrada">SOmething sss </a>|
-					<a href="https://www.facebook.com/solosforchange">Página no Facebook</a>
+					<a href="primeiro-solos-for-change-teresina">Inscrições</a>|
+					<a href="http://www.oficina-urbana.appspot.com">Causa Apoiada</a>|
+					<a href="https://www.facebook.com/solosforchange">No Facebook</a>
 				</div>
 				<div class="col col-md-2">
 				</div>
 			</div>
 			<div class="row row-fluid right">
 					powered by:
-					<spam class="nova-geracao"><a href="http://www.ng-tecnologia.appspot.com">nova geracao</a></spam>
+					<span class="nova-geracao"><a href="http://www.ng-tecnologia.appspot.com">nova geracao</a></span>
 			</div>
 		</div>
 	</div>
