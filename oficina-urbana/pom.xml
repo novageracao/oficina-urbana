@@ -5,12 +5,12 @@
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
-    <groupId>br.edu.ifpi</groupId>
-    <artifactId>novaescola</artifactId>
+    <groupId>com.nova.geracao</groupId>
+    <artifactId>oficina-urbana</artifactId>
 
     <properties>
         <app.id>nova-escola</app.id>
-        <app.version>0-1-3</app.version>
+        <app.version>0-1-6</app.version>
         <appengine.version>1.9.25</appengine.version>
         <gcloud.plugin.version>2.0.9.74.v20150814</gcloud.plugin.version>
 
